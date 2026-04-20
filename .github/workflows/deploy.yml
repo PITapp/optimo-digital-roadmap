@@ -39,7 +39,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: deploy
-          force_orphan: true
+          # Keep a continuous branch history so downstream consumers
+          # (Hostinger's git pull) can fast-forward. Orphan commits broke
+          # Hostinger's "Deploy" button with "divergent branches" errors.
+          force_orphan: false
           commit_message: "Deploy from ${{ github.sha }}"
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
