@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Hero from "@components/sections/Hero.astro";
+import Summary from "@components/sections/Summary.astro";
+import Pillar from "@components/sections/Pillar.astro";
+import Roadmap from "@components/sections/Roadmap.astro";
+import Contact from "@components/sections/Contact.astro";
+
+const pillars = (await getCollection("pillars")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const variants = ["default", "muted", "default"] as const;
+---
+
+<BaseLayout title="Optimo Digital Roadmap — Modernisierungsvorschlag von PITapp">
+  <Hero />
+  <Summary />
+
+  {
+    pillars.map((entry, index) => (
+      <Pillar entry={entry} variant={variants[index]} />
+    ))
+  }
+
+  <Roadmap />
+  <Contact />
+</BaseLayout>

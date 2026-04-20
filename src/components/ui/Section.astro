@@ -1,0 +1,21 @@
+---
+interface Props {
+  id?: string;
+  variant?: "default" | "muted" | "alt";
+  class?: string;
+}
+
+const { id, variant = "default", class: className = "" } = Astro.props;
+
+const variantClass = {
+  default: "bg-surface",
+  muted: "bg-surface-muted",
+  alt: "bg-surface-alt",
+}[variant];
+---
+
+<section id={id} class:list={["section", variantClass, className]}>
+  <div class="container-content">
+    <slot />
+  </div>
+</section>

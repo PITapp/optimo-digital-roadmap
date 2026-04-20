@@ -1,0 +1,62 @@
+---
+import { getEntry } from "astro:content";
+import Section from "@components/ui/Section.astro";
+import SectionHeader from "@components/ui/SectionHeader.astro";
+
+const entry = await getEntry("sections", "contact");
+const { Content } = await entry!.render();
+const { eyebrow, title, lede } = entry!.data;
+---
+
+<Section id="contact" variant="default">
+  <SectionHeader eyebrow={eyebrow} title={title} lede={lede} />
+
+  <div class="prose prose-neutral dark:prose-invert mt-8 max-w-3xl text-ink-muted prose-p:text-ink-muted">
+    <Content />
+  </div>
+
+  <div class="mt-12 grid gap-6 md:grid-cols-2">
+    <div class="rounded-xl border border-line/70 bg-surface-alt p-8 shadow-card dark:shadow-card-dark">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+        Ansprechpartner
+      </p>
+      <p class="mt-4 text-lg font-semibold text-ink">
+        {/* TODO: Name des PITapp-Ansprechpartners */}
+        <span class="text-ink-subtle">Name wird ergänzt</span>
+      </p>
+      <p class="mt-1 text-sm text-ink-muted">PITapp</p>
+
+      <dl class="mt-6 space-y-3 text-sm">
+        <div class="flex items-center gap-3">
+          <dt class="w-16 text-ink-subtle">E-Mail</dt>
+          <dd class="text-ink-muted">
+            {/* TODO: E-Mail-Adresse */}
+            <span class="text-ink-subtle">wird ergänzt</span>
+          </dd>
+        </div>
+        <div class="flex items-center gap-3">
+          <dt class="w-16 text-ink-subtle">Telefon</dt>
+          <dd class="text-ink-muted">
+            {/* TODO: Telefonnummer */}
+            <span class="text-ink-subtle">wird ergänzt</span>
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="rounded-xl border border-line/70 bg-surface-muted p-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle">
+        Einladung
+      </p>
+      <p class="mt-4 text-ink">
+        Wir zeigen Ihnen die drei Säulen gerne persönlich — in einem
+        unverbindlichen Gespräch, online oder vor Ort. Sie entscheiden,
+        wie tief Sie einsteigen möchten.
+      </p>
+      <p class="mt-4 text-sm text-ink-muted">
+        Sie können auf einzelne Säulen eingehen oder alle drei zusammen
+        besprechen. PITapp richtet sich nach Ihrem Zeitrahmen.
+      </p>
+    </div>
+  </div>
+</Section>

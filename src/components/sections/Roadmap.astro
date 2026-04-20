@@ -1,0 +1,62 @@
+---
+import { getEntry } from "astro:content";
+import Section from "@components/ui/Section.astro";
+import SectionHeader from "@components/ui/SectionHeader.astro";
+
+const entry = await getEntry("sections", "roadmap");
+const { Content } = await entry!.render();
+const { eyebrow, title, lede } = entry!.data;
+
+const steps = [
+  {
+    step: "01",
+    title: "Fundament",
+    pillar: "Business-Central-Migration",
+    description:
+      "Die neue BC-Version als technisches Rückgrat. Moderne Schnittstellen, längere Wartungszusage, bessere Oberfläche.",
+  },
+  {
+    step: "02",
+    title: "Täglicher Betrieb",
+    pillar: "Scanner-App",
+    description:
+      "Logistik und Lager arbeiten auf der neuen BC-Version mit einer modernen Web-App statt proprietärem Scanner-Client.",
+  },
+  {
+    step: "03",
+    title: "Kundenfront",
+    pillar: "Außendienst-Web-App",
+    description:
+      "Der Außendienst greift unterwegs auf aktuelle Zahlen und Stammdaten zu — ohne Installation, auf jedem Endgerät.",
+  },
+];
+---
+
+<Section id="roadmap" variant="muted">
+  <SectionHeader eyebrow={eyebrow} title={title} lede={lede} />
+
+  <div class="prose prose-neutral dark:prose-invert mt-10 max-w-3xl text-ink-muted prose-p:text-ink-muted">
+    <Content />
+  </div>
+
+  <ol class="mt-14 grid gap-6 md:grid-cols-3">
+    {
+      steps.map((item) => (
+        <li class="relative rounded-xl border border-line/70 bg-surface-alt p-6 shadow-card dark:shadow-card-dark">
+          <span class="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+            {item.step} · {item.pillar}
+          </span>
+          <h3 class="mt-3 text-xl font-semibold text-ink">{item.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-muted">
+            {item.description}
+          </p>
+        </li>
+      ))
+    }
+  </ol>
+
+  <p class="mt-10 max-w-2xl text-sm text-ink-subtle">
+    Die Reihenfolge ist ein Vorschlag — jede Säule ist einzeln bestellbar.
+    Als Paket entfaltet sich der größte Nutzen.
+  </p>
+</Section>

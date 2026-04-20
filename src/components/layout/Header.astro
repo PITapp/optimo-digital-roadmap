@@ -1,0 +1,54 @@
+---
+import ThemeToggle from "@components/ui/ThemeToggle.astro";
+
+const navItems = [
+  { href: "#summary", label: "Überblick" },
+  { href: "#scanner-app", label: "Scanner-App" },
+  { href: "#aussendienst", label: "Außendienst" },
+  { href: "#bc-migration", label: "BC-Migration" },
+  { href: "#roadmap", label: "Roadmap" },
+  { href: "#contact", label: "Kontakt" },
+];
+---
+
+<header
+  class="sticky top-0 z-40 border-b border-line/60 bg-surface/85 backdrop-blur supports-[backdrop-filter]:bg-surface/70"
+>
+  <div class="container-content flex h-16 items-center justify-between gap-4">
+    <a href="#top" class="flex items-center gap-3 text-sm font-semibold tracking-tight">
+      <span class="inline-flex items-center rounded-md dark:bg-white dark:px-2 dark:py-1.5">
+        <img
+          src="/optimo-logo.png"
+          alt="Optimo Schlafsysteme"
+          width="242"
+          height="80"
+          class="h-10 w-auto"
+          loading="eager"
+          decoding="async"
+        />
+      </span>
+      <span class="hidden h-8 w-px shrink-0 bg-line sm:block"></span>
+      <span class="hidden flex-col leading-tight sm:flex">
+        <span class="text-ink">Optimo Digital Roadmap</span>
+        <span class="text-[11px] font-normal uppercase tracking-[0.18em] text-ink-subtle">
+          präsentiert von PITapp
+        </span>
+      </span>
+    </a>
+
+    <nav aria-label="Hauptnavigation" class="hidden items-center gap-1 md:flex">
+      {
+        navItems.map((item) => (
+          <a
+            href={item.href}
+            class="rounded-md px-3 py-2 text-sm text-ink-muted transition hover:bg-surface-muted hover:text-ink"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <ThemeToggle />
+  </div>
+</header>

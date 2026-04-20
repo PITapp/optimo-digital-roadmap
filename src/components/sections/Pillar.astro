@@ -1,0 +1,61 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Section from "@components/ui/Section.astro";
+import SectionHeader from "@components/ui/SectionHeader.astro";
+import Card from "@components/ui/Card.astro";
+
+interface Props {
+  entry: CollectionEntry<"pillars">;
+  variant?: "default" | "muted" | "alt";
+}
+
+const { entry, variant = "default" } = Astro.props;
+const { eyebrow, title, lede, anchor, situation, features, keyMessage } = entry.data;
+---
+
+<Section id={anchor} variant={variant}>
+  <SectionHeader eyebrow={eyebrow} title={title} lede={lede} />
+
+  <div class="mt-12 grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
+    <div class="space-y-6">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle">
+          Ausgangssituation
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-ink-muted md:text-base">
+          {situation}
+        </p>
+      </div>
+
+      <div class="rounded-lg border-l-2 border-brand bg-surface-muted/60 p-5">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+          Kernbotschaft
+        </p>
+        <p class="mt-2 text-sm leading-relaxed text-ink md:text-base">
+          {keyMessage}
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle">
+        Funktionen
+      </p>
+
+      <ul class="mt-4 grid gap-4 sm:grid-cols-2">
+        {
+          features.map((feature) => (
+            <li>
+              <Card class="h-full">
+                <p class="text-sm font-semibold text-ink">{feature.title}</p>
+                <p class="mt-2 text-sm leading-relaxed text-ink-muted">
+                  {feature.description}
+                </p>
+              </Card>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Section>

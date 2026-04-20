@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------------------------
+ * Optional: Inter as a local webfont.
+ * Drop the woff2 files into public/fonts/ (see public/fonts/README.md)
+ * and uncomment the @font-face blocks below.
+ * Until then the system font stack is used — no external requests.
+ * ------------------------------------------------------------------------- */
+
+/*
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/inter-medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/inter-semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-bold.woff2") format("woff2");
+}
+*/
+
+@layer base {
+  /* Design tokens — light mode (default).
+     Values are space-separated RGB triplets so Tailwind's
+     <alpha-value> syntax works (e.g. bg-ink/80). */
+  :root {
+    --color-surface: 250 249 247;       /* warm white page background */
+    --color-surface-alt: 255 255 255;   /* cards, raised surfaces */
+    --color-surface-muted: 243 241 238; /* sections with soft contrast */
+    --color-ink: 20 20 22;              /* primary text */
+    --color-ink-muted: 78 78 82;        /* secondary text */
+    --color-ink-subtle: 130 130 135;    /* captions, helper text */
+    --color-line: 228 226 222;          /* borders, dividers */
+
+    /* Optimo red — full brand saturation for light backgrounds. */
+    --color-brand: 200 16 46;           /* #C8102E */
+    --color-brand-hover: 168 14 39;     /* #A80E27 — darker on hover */
+
+    color-scheme: light;
+  }
+
+  /* Dark mode — activated by class="dark" on <html>. */
+  html.dark {
+    --color-surface: 14 14 16;
+    --color-surface-alt: 22 22 26;
+    --color-surface-muted: 28 28 32;
+    --color-ink: 240 240 240;
+    --color-ink-muted: 175 175 180;
+    --color-ink-subtle: 130 130 138;
+    --color-line: 44 44 50;
+
+    /* Softer, desaturated red so the accent doesn't glow on dark surfaces. */
+    --color-brand: 219 90 110;          /* #DB5A6E */
+    --color-brand-hover: 235 125 142;   /* #EB7D8E — lighter on hover */
+
+    color-scheme: dark;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+    min-height: 100vh;
+  }
+
+  ::selection {
+    @apply bg-brand/20 text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-surface;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 md:px-8;
+  }
+
+  .section {
+    @apply py-section md:py-section-lg;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand;
+  }
+
+  .lede {
+    @apply text-lg md:text-xl text-ink-muted leading-relaxed;
+  }
+}
