@@ -1,0 +1,4 @@
+# This presentation is intended for Optimo's management and staff only.
+# Please do not index or follow any links on this site.
+User-agent: *
+Disallow: /
