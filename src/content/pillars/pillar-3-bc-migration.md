@@ -13,6 +13,17 @@ features:
   - title: "Abstimmung mit den Apps"
     description: "Scanner-App und Außendienst-App werden passgenau auf die neue BC-Version ausgerichtet."
 keyMessage: "Das Fundament des Gesamtpakets — drittens im Präsentationsfluss, aber eigentlich das technische Rückgrat der Modernisierung."
+galleryLayout: "screens"
+gallery:
+  - src: "/mockups/migration-versionen.svg"
+    alt: "Muster-Visualisierung: Versionssprung von Business Central Version 14 auf die aktuelle Version"
+    caption: "Versionssprung — von Version 14 auf die aktuelle Version, ausdrücklich on-prem."
+  - src: "/mockups/migration-architektur.svg"
+    alt: "Muster-Visualisierung: Zielarchitektur nach der Migration"
+    caption: "Zielarchitektur — BC als Fundament, Scanner-App und Außendienst-App bauen darauf auf."
+  - src: "/mockups/migration-vorteile.svg"
+    alt: "Muster-Visualisierung: Sechs konkrete Verbesserungen durch die Migration"
+    caption: "Was sich ändert — sechs konkrete Verbesserungen, die mit der Migration nutzbar werden."
 ---
 
 <!-- TODO: Langtext aus BRIEFING Kapitel 4.3 – konkrete Vorteile,

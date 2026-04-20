@@ -15,6 +15,17 @@ features:
   - title: "Artikelinformationen"
     description: "Direkte Abfrage von Stammdaten, Beständen und Preisen am Gerät."
 keyMessage: "Moderne Web-Technik statt proprietärer Scanner-Client, direkte BC-Anbindung, gerätunabhängig nutzbar."
+galleryLayout: "phones"
+gallery:
+  - src: "/mockups/scanner-inventur.svg"
+    alt: "Muster-Screenshot der Inventur-Ansicht in der Scanner-App"
+    caption: "Inventur — Artikel scannen, Abweichungen direkt sichtbar, Buchung nach BC mit einem Klick."
+  - src: "/mockups/scanner-ladeliste.svg"
+    alt: "Muster-Screenshot einer Ladeliste in der Scanner-App"
+    caption: "Ladeliste — geführter Ablauf beim LKW-Beladen, jede Position wird einzeln gescannt und quittiert."
+  - src: "/mockups/scanner-artikel.svg"
+    alt: "Muster-Screenshot einer Artikel-Detailansicht in der Scanner-App"
+    caption: "Artikelinformation — Bestand, reservierte Mengen und Lagerorte sofort am Gerät abrufbar."
 ---
 
 <!-- TODO: Langtext aus BRIEFING Kapitel 4.1 – ausführliche Beschreibung

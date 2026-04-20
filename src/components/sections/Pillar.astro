@@ -10,7 +10,18 @@ interface Props {
 }
 
 const { entry, variant = "default" } = Astro.props;
-const { eyebrow, title, lede, anchor, situation, features, keyMessage } = entry.data;
+const { eyebrow, title, lede, anchor, situation, features, keyMessage, gallery, galleryLayout = "screens" } = entry.data;
+
+const galleryClasses =
+  galleryLayout === "phones"
+    ? {
+        grid: "mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3",
+        frame: "mx-auto max-w-[260px] aspect-[9/16]",
+      }
+    : {
+        grid: "mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3",
+        frame: "aspect-[3/2]",
+      };
 ---
 
 <Section id={anchor} variant={variant}>
@@ -58,4 +69,40 @@ const { eyebrow, title, lede, anchor, situation, features, keyMessage } = entry.
       </ul>
     </div>
   </div>
+
+  {
+    gallery && gallery.length > 0 && (
+      <div class="mt-16">
+        <div class="flex items-baseline justify-between gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle">
+            Muster-Vorschau
+          </p>
+          <p class="text-xs text-ink-subtle">
+            Stilisierte Platzhalter — finale Screenshots werden nachgereicht.
+          </p>
+        </div>
+
+        <ul class={galleryClasses.grid}>
+          {gallery.map((item) => (
+            <li>
+              <figure class="flex h-full flex-col">
+                <div class={`overflow-hidden rounded-xl border border-line/70 bg-surface-alt shadow-card dark:shadow-card-dark ${galleryClasses.frame}`}>
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-contain"
+                  />
+                </div>
+                <figcaption class="mt-3 text-sm leading-relaxed text-ink-muted">
+                  {item.caption}
+                </figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
 </Section>

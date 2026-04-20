@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-label="Muster-Visualisierung: Vorteile der neuen Business-Central-Version">
+  <rect x="0" y="0" width="720" height="480" rx="16" fill="#F7F6F3"/>
+  <text x="360" y="56" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600" text-anchor="middle" letter-spacing="2">WAS SICH ÄNDERT</text>
+  <text x="360" y="86" font-family="Inter, Arial, sans-serif" font-size="22" fill="#1A1A1C" font-weight="700" text-anchor="middle">Sechs konkrete Verbesserungen</text>
+
+  <!-- Grid 3x2 of benefit cards -->
+  <g font-family="Inter, Arial, sans-serif">
+    <!-- row 1 -->
+    <rect x="60" y="128" width="192" height="140" rx="12" fill="#fff" stroke="#E1DFD8"/>
+    <circle cx="88" cy="156" r="16" fill="#FCEAED"/>
+    <text x="88" y="161" font-size="16" fill="#C8102E" font-weight="700" text-anchor="middle">01</text>
+    <text x="80" y="204" font-size="13" fill="#1A1A1C" font-weight="700">Moderne Oberfläche</text>
+    <text x="80" y="226" font-size="11" fill="#666">Schnellere Einarbeitung neuer Mitarbeiter, Rollen-zentrierte Arbeitsflächen.</text>
+
+    <rect x="264" y="128" width="192" height="140" rx="12" fill="#fff" stroke="#E1DFD8"/>
+    <circle cx="292" cy="156" r="16" fill="#FCEAED"/>
+    <text x="292" y="161" font-size="16" fill="#C8102E" font-weight="700" text-anchor="middle">02</text>
+    <text x="284" y="204" font-size="13" fill="#1A1A1C" font-weight="700">Offene REST-APIs</text>
+    <text x="284" y="226" font-size="11" fill="#666">Saubere Anbindung von Scanner- und Außendienst-App, ohne Workarounds.</text>
+
+    <rect x="468" y="128" width="192" height="140" rx="12" fill="#fff" stroke="#E1DFD8"/>
+    <circle cx="496" cy="156" r="16" fill="#FCEAED"/>
+    <text x="496" y="161" font-size="16" fill="#C8102E" font-weight="700" text-anchor="middle">03</text>
+    <text x="488" y="204" font-size="13" fill="#1A1A1C" font-weight="700">Längere Wartungszusage</text>
+    <text x="488" y="226" font-size="11" fill="#666">Aktive Updates und Security-Patches für mehrere Jahre garantiert.</text>
+
+    <!-- row 2 -->
+    <rect x="60" y="288" width="192" height="140" rx="12" fill="#fff" stroke="#E1DFD8"/>
+    <circle cx="88" cy="316" r="16" fill="#FCEAED"/>
+    <text x="88" y="321" font-size="16" fill="#C8102E" font-weight="700" text-anchor="middle">04</text>
+    <text x="80" y="364" font-size="13" fill="#1A1A1C" font-weight="700">Bessere Reports</text>
+    <text x="80" y="386" font-size="11" fill="#666">Direkter Weg zu Power BI und modernen Auswertungswerkzeugen.</text>
+
+    <rect x="264" y="288" width="192" height="140" rx="12" fill="#fff" stroke="#E1DFD8"/>
+    <circle cx="292" cy="316" r="16" fill="#FCEAED"/>
+    <text x="292" y="321" font-size="16" fill="#C8102E" font-weight="700" text-anchor="middle">05</text>
+    <text x="284" y="364" font-size="13" fill="#1A1A1C" font-weight="700">Outlook- und Teams-Anbindung</text>
+    <text x="284" y="386" font-size="11" fill="#666">Belege und Kontakte aus BC direkt im gewohnten Arbeitsumfeld aufrufen.</text>
+
+    <rect x="468" y="288" width="192" height="140" rx="12" fill="#fff" stroke="#E1DFD8"/>
+    <circle cx="496" cy="316" r="16" fill="#FCEAED"/>
+    <text x="496" y="321" font-size="16" fill="#C8102E" font-weight="700" text-anchor="middle">06</text>
+    <text x="488" y="364" font-size="13" fill="#1A1A1C" font-weight="700">On-prem bleibt on-prem</text>
+    <text x="488" y="386" font-size="11" fill="#666">Keine Cloud-Pflicht. Ihre Daten bleiben in der Optimo-Infrastruktur.</text>
+  </g>
+
+  <text x="360" y="462" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

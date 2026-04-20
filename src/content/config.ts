@@ -16,6 +16,16 @@ const pillars = defineCollection({
       }),
     ),
     keyMessage: z.string(),
+    galleryLayout: z.enum(["phones", "screens"]).optional(),
+    gallery: z
+      .array(
+        z.object({
+          src: z.string(),
+          alt: z.string(),
+          caption: z.string(),
+        }),
+      )
+      .optional(),
   }),
 });
 
