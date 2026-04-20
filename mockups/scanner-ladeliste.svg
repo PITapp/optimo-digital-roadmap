@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="Muster-Screenshot: Ladeliste für LKW-Beladung in der Scanner-App">
+  <rect x="0" y="0" width="360" height="640" rx="36" fill="#1F2023"/>
+  <rect x="12" y="12" width="336" height="616" rx="26" fill="#F7F6F3"/>
+  <rect x="140" y="24" width="80" height="18" rx="9" fill="#1F2023"/>
+
+  <!-- Header with back arrow -->
+  <path d="M36 80 l-10 8 l10 8" stroke="#1A1A1C" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="92" font-family="Inter, Arial, sans-serif" font-size="14" fill="#1A1A1C" font-weight="700">Ladeliste LKW-041</text>
+
+  <!-- Progress banner -->
+  <rect x="28" y="112" width="304" height="72" rx="10" fill="#14151A"/>
+  <text x="48" y="138" font-family="Inter, Arial, sans-serif" font-size="11" fill="#B0AEA8" font-weight="600">FORTSCHRITT</text>
+  <text x="48" y="160" font-family="Inter, Arial, sans-serif" font-size="22" fill="#fff" font-weight="700">7 / 12 Positionen</text>
+  <rect x="48" y="170" width="264" height="4" rx="2" fill="#2A2C32"/>
+  <rect x="48" y="170" width="154" height="4" rx="2" fill="#C8102E"/>
+
+  <!-- Checklist items -->
+  <g font-family="Inter, Arial, sans-serif">
+    <!-- done -->
+    <rect x="28" y="200" width="304" height="56" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="52" cy="228" r="10" fill="#2F8F45"/>
+    <path d="M46 228 l4 4 l8 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="72" y="222" font-size="10" fill="#8A8A90" font-weight="600">POS 01 · 4 × 200 × 200</text>
+    <text x="72" y="240" font-size="14" fill="#1A1A1C" font-weight="700" text-decoration="line-through">Pallet A-12 · Bereich 1</text>
+
+    <rect x="28" y="264" width="304" height="56" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="52" cy="292" r="10" fill="#2F8F45"/>
+    <path d="M46 292 l4 4 l8 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <text x="72" y="286" font-size="10" fill="#8A8A90" font-weight="600">POS 02 · 2 × 140 × 200</text>
+    <text x="72" y="304" font-size="14" fill="#1A1A1C" font-weight="700" text-decoration="line-through">Pallet A-15 · Bereich 1</text>
+
+    <!-- active -->
+    <rect x="28" y="328" width="304" height="72" rx="10" fill="#FCEAED" stroke="#C8102E" stroke-width="1.5"/>
+    <circle cx="52" cy="364" r="10" fill="none" stroke="#C8102E" stroke-width="2"/>
+    <text x="72" y="354" font-size="10" fill="#C8102E" font-weight="700">JETZT SCANNEN · POS 03</text>
+    <text x="72" y="374" font-size="15" fill="#1A1A1C" font-weight="700">3 × Lattenrost 90 × 200</text>
+    <text x="72" y="390" font-size="11" fill="#666">Pallet A-18 · Bereich 2</text>
+
+    <!-- pending -->
+    <rect x="28" y="408" width="304" height="56" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="52" cy="436" r="10" fill="none" stroke="#C0BCB3" stroke-width="2"/>
+    <text x="72" y="430" font-size="10" fill="#8A8A90" font-weight="600">POS 04 · 2 × 160 × 200</text>
+    <text x="72" y="448" font-size="14" fill="#1A1A1C" font-weight="600">Pallet B-03 · Bereich 2</text>
+
+    <rect x="28" y="472" width="304" height="56" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="52" cy="500" r="10" fill="none" stroke="#C0BCB3" stroke-width="2"/>
+    <text x="72" y="494" font-size="10" fill="#8A8A90" font-weight="600">POS 05 · 1 × 120 × 200</text>
+    <text x="72" y="512" font-size="14" fill="#1A1A1C" font-weight="600">Pallet B-07 · Bereich 3</text>
+  </g>
+
+  <!-- Primary button -->
+  <rect x="28" y="548" width="304" height="48" rx="10" fill="#C8102E"/>
+  <text x="180" y="578" font-family="Inter, Arial, sans-serif" font-size="14" fill="#fff" font-weight="700" text-anchor="middle">Barcode scannen</text>
+
+  <text x="180" y="620" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

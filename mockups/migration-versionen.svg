@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-label="Muster-Visualisierung: Versionssprung Business Central von Version 14 auf die aktuelle Version">
+  <rect x="0" y="0" width="720" height="480" rx="16" fill="#F7F6F3"/>
+
+  <!-- Title -->
+  <text x="360" y="56" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600" text-anchor="middle" letter-spacing="2">MIGRATIONSPFAD</text>
+  <text x="360" y="86" font-family="Inter, Arial, sans-serif" font-size="22" fill="#1A1A1C" font-weight="700" text-anchor="middle">Version 14 → aktuelle Version, on-prem</text>
+
+  <!-- Old version card -->
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="80" y="140" width="220" height="240" rx="14" fill="#fff" stroke="#E1DFD8"/>
+    <rect x="80" y="140" width="220" height="52" rx="14" fill="#ECEAE5"/>
+    <text x="104" y="172" font-size="11" fill="#8A8A90" font-weight="700" letter-spacing="1.5">HEUTE</text>
+    <circle cx="268" cy="166" r="10" fill="#C0BCB3"/>
+    <text x="268" y="170" font-size="11" fill="#fff" font-weight="700" text-anchor="middle">14</text>
+
+    <text x="104" y="220" font-size="18" fill="#1A1A1C" font-weight="700">Business Central</text>
+    <text x="104" y="240" font-size="14" fill="#666">Version 14</text>
+
+    <line x1="104" y1="258" x2="276" y2="258" stroke="#EFEDE7"/>
+
+    <g font-size="11" fill="#666">
+      <text x="104" y="284">· Support eingeschränkt</text>
+      <text x="104" y="304">· Oberfläche veraltet</text>
+      <text x="104" y="324">· Ältere REST-Schnittstellen</text>
+      <text x="104" y="344">· Kein Teams-/Outlook-Link</text>
+      <text x="104" y="364">· Eingeschränkte Telemetrie</text>
+    </g>
+  </g>
+
+  <!-- Arrow -->
+  <g>
+    <line x1="308" y1="260" x2="412" y2="260" stroke="#C8102E" stroke-width="3"/>
+    <path d="M402 250 l14 10 l-14 10" stroke="#C8102E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="326" y="226" width="68" height="22" rx="11" fill="#C8102E"/>
+    <text x="360" y="241" font-family="Inter, Arial, sans-serif" font-size="11" fill="#fff" font-weight="700" text-anchor="middle">Migration</text>
+  </g>
+
+  <!-- New version card -->
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="420" y="140" width="220" height="240" rx="14" fill="#fff" stroke="#C8102E" stroke-width="1.5"/>
+    <rect x="420" y="140" width="220" height="52" rx="14" fill="#FCEAED"/>
+    <text x="444" y="172" font-size="11" fill="#C8102E" font-weight="700" letter-spacing="1.5">ZIEL</text>
+    <circle cx="608" cy="166" r="10" fill="#C8102E"/>
+    <text x="608" y="170" font-size="10" fill="#fff" font-weight="700" text-anchor="middle">NEU</text>
+
+    <text x="444" y="220" font-size="18" fill="#1A1A1C" font-weight="700">Business Central</text>
+    <text x="444" y="240" font-size="14" fill="#666">aktuelle Version · on-prem</text>
+
+    <line x1="444" y1="258" x2="616" y2="258" stroke="#EFEDE7"/>
+
+    <g font-size="11" fill="#1A1A1C">
+      <text x="444" y="284">· Moderne Oberfläche</text>
+      <text x="444" y="304">· Aktive Wartungszusage</text>
+      <text x="444" y="324">· Neue REST-APIs</text>
+      <text x="444" y="344">· Saubere Scanner-Anbindung</text>
+      <text x="444" y="364">· Moderne Reporting-Tools</text>
+    </g>
+  </g>
+
+  <!-- Footnote -->
+  <text x="360" y="428" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">On-prem — nicht Cloud. Die Umgebung bleibt in Ihrer Infrastruktur.</text>
+  <text x="360" y="460" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

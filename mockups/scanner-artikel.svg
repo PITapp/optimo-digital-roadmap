@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="Muster-Screenshot: Artikelinformation in der Scanner-App">
+  <rect x="0" y="0" width="360" height="640" rx="36" fill="#1F2023"/>
+  <rect x="12" y="12" width="336" height="616" rx="26" fill="#F7F6F3"/>
+  <rect x="140" y="24" width="80" height="18" rx="9" fill="#1F2023"/>
+
+  <path d="M36 80 l-10 8 l10 8" stroke="#1A1A1C" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="92" font-family="Inter, Arial, sans-serif" font-size="14" fill="#1A1A1C" font-weight="700">Artikelinformation</text>
+  <circle cx="318" cy="88" r="14" fill="#ECEAE5"/>
+  <text x="318" y="94" font-family="Inter, Arial, sans-serif" font-size="18" fill="#1A1A1C" font-weight="700" text-anchor="middle">☆</text>
+
+  <!-- Product info block -->
+  <rect x="28" y="112" width="304" height="120" rx="12" fill="#fff" stroke="#E7E4DE"/>
+  <rect x="44" y="128" width="64" height="88" rx="8" fill="#ECEAE5"/>
+  <rect x="52" y="144" width="48" height="10" rx="2" fill="#C0BCB3"/>
+  <rect x="52" y="160" width="40" height="6" rx="2" fill="#D6D3CC"/>
+  <rect x="52" y="172" width="44" height="6" rx="2" fill="#D6D3CC"/>
+  <rect x="52" y="184" width="36" height="6" rx="2" fill="#D6D3CC"/>
+
+  <text x="128" y="140" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="600">ART-4518</text>
+  <text x="128" y="162" font-family="Inter, Arial, sans-serif" font-size="15" fill="#1A1A1C" font-weight="700">Matratze Premium</text>
+  <text x="128" y="180" font-family="Inter, Arial, sans-serif" font-size="13" fill="#1A1A1C">140 × 200 cm</text>
+  <text x="128" y="202" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">Serie NextGen · KT-Liga 3</text>
+
+  <!-- KPI grid -->
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="28" y="248" width="147" height="88" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <text x="44" y="272" font-size="10" fill="#8A8A90" font-weight="600">BESTAND GESAMT</text>
+    <text x="44" y="302" font-size="28" fill="#1A1A1C" font-weight="700">164</text>
+    <text x="104" y="302" font-size="12" fill="#8A8A90">Stück</text>
+    <text x="44" y="322" font-size="11" fill="#2F8F45" font-weight="600">▲ verfügbar</text>
+
+    <rect x="185" y="248" width="147" height="88" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <text x="201" y="272" font-size="10" fill="#8A8A90" font-weight="600">RESERVIERT</text>
+    <text x="201" y="302" font-size="28" fill="#1A1A1C" font-weight="700">38</text>
+    <text x="237" y="302" font-size="12" fill="#8A8A90">Stück</text>
+    <text x="201" y="322" font-size="11" fill="#666">5 Aufträge</text>
+  </g>
+
+  <!-- Lagerorte -->
+  <text x="28" y="368" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="700" letter-spacing="1.5">LAGERORTE</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="28" y="380" width="304" height="48" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <text x="44" y="402" font-size="13" fill="#1A1A1C" font-weight="700">Halle 3 · Regal A-18</text>
+    <text x="44" y="418" font-size="11" fill="#666">112 Stück</text>
+    <text x="316" y="410" font-size="13" fill="#C8102E" font-weight="700" text-anchor="end">→</text>
+
+    <rect x="28" y="436" width="304" height="48" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <text x="44" y="458" font-size="13" fill="#1A1A1C" font-weight="700">Halle 3 · Regal A-19</text>
+    <text x="44" y="474" font-size="11" fill="#666">44 Stück</text>
+    <text x="316" y="466" font-size="13" fill="#C8102E" font-weight="700" text-anchor="end">→</text>
+
+    <rect x="28" y="492" width="304" height="48" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <text x="44" y="514" font-size="13" fill="#1A1A1C" font-weight="700">Halle 5 · Pufferzone</text>
+    <text x="44" y="530" font-size="11" fill="#666">8 Stück</text>
+    <text x="316" y="522" font-size="13" fill="#C8102E" font-weight="700" text-anchor="end">→</text>
+  </g>
+
+  <rect x="28" y="556" width="304" height="44" rx="10" fill="none" stroke="#1A1A1C" stroke-width="1.5"/>
+  <text x="180" y="583" font-family="Inter, Arial, sans-serif" font-size="13" fill="#1A1A1C" font-weight="700" text-anchor="middle">Umlagerung anlegen</text>
+
+  <text x="180" y="620" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

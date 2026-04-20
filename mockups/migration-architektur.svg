@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-label="Muster-Visualisierung: Zielarchitektur nach der Business-Central-Migration, on-prem">
+  <rect x="0" y="0" width="720" height="480" rx="16" fill="#F7F6F3"/>
+  <text x="360" y="56" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600" text-anchor="middle" letter-spacing="2">ZIELARCHITEKTUR · ON-PREM</text>
+  <text x="360" y="86" font-family="Inter, Arial, sans-serif" font-size="22" fill="#1A1A1C" font-weight="700" text-anchor="middle">BC als Fundament für beide Apps</text>
+
+  <!-- BC server at center -->
+  <rect x="258" y="200" width="204" height="120" rx="14" fill="#1A1A1C"/>
+  <text x="360" y="232" font-family="Inter, Arial, sans-serif" font-size="10" fill="#B0AEA8" font-weight="700" text-anchor="middle" letter-spacing="1.5">BUSINESS CENTRAL</text>
+  <text x="360" y="262" font-family="Inter, Arial, sans-serif" font-size="18" fill="#fff" font-weight="700" text-anchor="middle">Aktuelle Version</text>
+  <text x="360" y="284" font-family="Inter, Arial, sans-serif" font-size="13" fill="#C8102E" font-weight="700" text-anchor="middle">on-prem</text>
+  <text x="360" y="304" font-family="Inter, Arial, sans-serif" font-size="11" fill="#888" text-anchor="middle">Datenhaltung in Optimo-Infrastruktur</text>
+
+  <!-- Infrastructure icons -->
+  <g>
+    <rect x="282" y="336" width="42" height="28" rx="4" fill="#2A2C32"/>
+    <rect x="288" y="340" width="30" height="4" rx="1" fill="#C8102E"/>
+    <rect x="288" y="348" width="30" height="4" rx="1" fill="#4A4B52"/>
+    <rect x="288" y="356" width="30" height="4" rx="1" fill="#4A4B52"/>
+    <text x="303" y="378" font-family="Inter, Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">DB</text>
+
+    <rect x="340" y="336" width="42" height="28" rx="4" fill="#2A2C32"/>
+    <rect x="346" y="340" width="30" height="4" rx="1" fill="#C8102E"/>
+    <rect x="346" y="348" width="30" height="4" rx="1" fill="#4A4B52"/>
+    <rect x="346" y="356" width="30" height="4" rx="1" fill="#4A4B52"/>
+    <text x="361" y="378" font-family="Inter, Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">App-Svc</text>
+
+    <rect x="398" y="336" width="42" height="28" rx="4" fill="#2A2C32"/>
+    <rect x="404" y="340" width="30" height="4" rx="1" fill="#C8102E"/>
+    <rect x="404" y="348" width="30" height="4" rx="1" fill="#4A4B52"/>
+    <rect x="404" y="356" width="30" height="4" rx="1" fill="#4A4B52"/>
+    <text x="419" y="378" font-family="Inter, Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">API</text>
+  </g>
+
+  <!-- Scanner-App (left) -->
+  <rect x="60" y="180" width="140" height="160" rx="14" fill="#fff" stroke="#E1DFD8"/>
+  <rect x="110" y="200" width="40" height="64" rx="6" fill="#ECEAE5"/>
+  <rect x="114" y="206" width="32" height="50" rx="2" fill="#fff"/>
+  <rect x="118" y="212" width="24" height="4" fill="#C0BCB3"/>
+  <rect x="118" y="220" width="20" height="3" fill="#D6D3CC"/>
+  <rect x="118" y="227" width="22" height="3" fill="#D6D3CC"/>
+  <text x="130" y="290" font-family="Inter, Arial, sans-serif" font-size="12" fill="#1A1A1C" font-weight="700" text-anchor="middle">Scanner-App</text>
+  <text x="130" y="308" font-family="Inter, Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Lager · mobil</text>
+  <text x="130" y="326" font-family="Inter, Arial, sans-serif" font-size="10" fill="#C8102E" font-weight="700" text-anchor="middle">Säule 1</text>
+
+  <!-- Arrow to BC -->
+  <line x1="204" y1="260" x2="256" y2="260" stroke="#C8102E" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="230" y="252" font-family="Inter, Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">REST</text>
+
+  <!-- Außendienst-App (right) -->
+  <rect x="520" y="180" width="140" height="160" rx="14" fill="#fff" stroke="#E1DFD8"/>
+  <rect x="540" y="200" width="100" height="64" rx="6" fill="#ECEAE5"/>
+  <rect x="548" y="208" width="84" height="6" rx="2" fill="#C0BCB3"/>
+  <rect x="548" y="220" width="40" height="36" rx="3" fill="#D6D3CC"/>
+  <rect x="596" y="220" width="36" height="12" rx="3" fill="#D6D3CC"/>
+  <rect x="596" y="236" width="36" height="8" rx="3" fill="#D6D3CC"/>
+  <rect x="596" y="248" width="28" height="8" rx="3" fill="#D6D3CC"/>
+  <text x="590" y="290" font-family="Inter, Arial, sans-serif" font-size="12" fill="#1A1A1C" font-weight="700" text-anchor="middle">Außendienst-App</text>
+  <text x="590" y="308" font-family="Inter, Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Tablet · Laptop</text>
+  <text x="590" y="326" font-family="Inter, Arial, sans-serif" font-size="10" fill="#C8102E" font-weight="700" text-anchor="middle">Säule 2</text>
+
+  <!-- Arrow to BC -->
+  <line x1="464" y1="260" x2="516" y2="260" stroke="#C8102E" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="490" y="252" font-family="Inter, Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">REST</text>
+
+  <!-- Footnote -->
+  <text x="360" y="430" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Beide Apps nutzen dieselbe Datenbasis — konsistent, wartungsarm.</text>
+  <text x="360" y="460" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

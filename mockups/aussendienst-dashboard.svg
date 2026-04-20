@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-label="Muster-Screenshot: Dashboard der Außendienst-Web-App">
+  <!-- Device frame -->
+  <rect x="0" y="0" width="720" height="480" rx="16" fill="#1F2023"/>
+  <rect x="8" y="8" width="704" height="464" rx="10" fill="#F7F6F3"/>
+  <!-- Top bar -->
+  <rect x="8" y="8" width="704" height="44" rx="10" fill="#ECEAE5"/>
+  <circle cx="34" cy="30" r="5" fill="#D7D4CD"/>
+  <circle cx="52" cy="30" r="5" fill="#D7D4CD"/>
+  <circle cx="70" cy="30" r="5" fill="#D7D4CD"/>
+  <rect x="180" y="20" width="360" height="20" rx="10" fill="#fff" stroke="#E1DFD8"/>
+  <text x="200" y="34" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90">optimo.at/aussendienst/dashboard</text>
+
+  <!-- Sidebar -->
+  <rect x="8" y="52" width="150" height="420" fill="#14151A"/>
+  <rect x="28" y="78" width="80" height="10" rx="2" fill="#3A3B42"/>
+  <rect x="28" y="108" width="110" height="28" rx="6" fill="#C8102E"/>
+  <text x="44" y="126" font-family="Inter, Arial, sans-serif" font-size="11" fill="#fff" font-weight="700">Übersicht</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#B0AEA8">
+    <text x="44" y="158">Kunden</text>
+    <text x="44" y="182">Artikel</text>
+    <text x="44" y="206">Besuche</text>
+    <text x="44" y="230">Aufträge</text>
+    <text x="44" y="254">Auswertungen</text>
+  </g>
+  <circle cx="34" cy="430" r="14" fill="#2A2C32"/>
+  <rect x="56" y="424" width="70" height="6" rx="2" fill="#3A3B42"/>
+  <rect x="56" y="434" width="50" height="5" rx="2" fill="#3A3B42"/>
+
+  <!-- Main content -->
+  <text x="182" y="90" font-family="Inter, Arial, sans-serif" font-size="12" fill="#8A8A90" font-weight="600" letter-spacing="1.5">AUßENDIENST · 2026 Q1</text>
+  <text x="182" y="114" font-family="Inter, Arial, sans-serif" font-size="22" fill="#1A1A1C" font-weight="700">Willkommen, Martin.</text>
+
+  <!-- KPI cards -->
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="182" y="136" width="162" height="88" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <text x="198" y="158" font-size="10" fill="#8A8A90" font-weight="600">UMSATZ QUARTAL</text>
+    <text x="198" y="190" font-size="22" fill="#1A1A1C" font-weight="700">€ 842.300</text>
+    <text x="198" y="208" font-size="11" fill="#2F8F45" font-weight="600">▲ +12,4 % ggü. Q4</text>
+
+    <rect x="354" y="136" width="162" height="88" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <text x="370" y="158" font-size="10" fill="#8A8A90" font-weight="600">OFFENE AUFTRÄGE</text>
+    <text x="370" y="190" font-size="22" fill="#1A1A1C" font-weight="700">38</text>
+    <text x="370" y="208" font-size="11" fill="#666">7 priorisiert</text>
+
+    <rect x="526" y="136" width="162" height="88" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <text x="542" y="158" font-size="10" fill="#8A8A90" font-weight="600">BESUCHE DIESE WOCHE</text>
+    <text x="542" y="190" font-size="22" fill="#1A1A1C" font-weight="700">14</text>
+    <text x="542" y="208" font-size="11" fill="#C8102E" font-weight="600">3 ausstehend</text>
+  </g>
+
+  <!-- Chart card -->
+  <rect x="182" y="240" width="334" height="216" rx="10" fill="#fff" stroke="#E7E4DE"/>
+  <text x="198" y="262" font-family="Inter, Arial, sans-serif" font-size="12" fill="#1A1A1C" font-weight="700">Umsatzentwicklung · letzte 12 Wochen</text>
+  <text x="198" y="278" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90">pro Kundensegment</text>
+
+  <!-- Chart area -->
+  <g stroke="#EFEDE7" stroke-width="1">
+    <line x1="216" y1="302" x2="500" y2="302"/>
+    <line x1="216" y1="344" x2="500" y2="344"/>
+    <line x1="216" y1="386" x2="500" y2="386"/>
+    <line x1="216" y1="428" x2="500" y2="428"/>
+  </g>
+  <!-- Line chart A -->
+  <polyline points="216,410 242,400 268,390 294,376 320,380 346,358 372,344 398,350 424,330 450,318 476,312 500,296"
+    fill="none" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Line chart B -->
+  <polyline points="216,420 242,418 268,410 294,398 320,394 346,386 372,384 398,372 424,368 450,364 476,362 500,354"
+    fill="none" stroke="#888" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>
+  <!-- Legend -->
+  <rect x="216" y="448" width="10" height="2" fill="#C8102E"/>
+  <text x="232" y="452" font-family="Inter, Arial, sans-serif" font-size="10" fill="#666">Fachhandel</text>
+  <rect x="300" y="448" width="10" height="2" fill="#888"/>
+  <text x="316" y="452" font-family="Inter, Arial, sans-serif" font-size="10" fill="#666">Großkunden</text>
+
+  <!-- Next visits -->
+  <rect x="526" y="240" width="162" height="216" rx="10" fill="#14151A"/>
+  <text x="542" y="262" font-family="Inter, Arial, sans-serif" font-size="10" fill="#B0AEA8" font-weight="700" letter-spacing="1.5">NÄCHSTE BESUCHE</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="542" y="292" font-size="11" fill="#fff" font-weight="700">Mo · 09:30</text>
+    <text x="542" y="308" font-size="11" fill="#B0AEA8">Möbel Huber GmbH</text>
+
+    <rect x="542" y="322" width="128" height="1" fill="#2A2C32"/>
+
+    <text x="542" y="342" font-size="11" fill="#fff" font-weight="700">Mo · 14:00</text>
+    <text x="542" y="358" font-size="11" fill="#B0AEA8">Schlafhaus Tirol</text>
+
+    <rect x="542" y="372" width="128" height="1" fill="#2A2C32"/>
+
+    <text x="542" y="392" font-size="11" fill="#fff" font-weight="700">Di · 10:00</text>
+    <text x="542" y="408" font-size="11" fill="#B0AEA8">Wohnwelt Meier</text>
+
+    <rect x="542" y="422" width="128" height="1" fill="#2A2C32"/>
+
+    <text x="542" y="442" font-size="11" fill="#C8102E" font-weight="700">Alle Termine →</text>
+  </g>
+
+  <text x="450" y="470" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

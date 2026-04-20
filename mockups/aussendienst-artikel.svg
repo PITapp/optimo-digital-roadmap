@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-label="Muster-Screenshot: Artikelkatalog in der Außendienst-Web-App">
+  <rect x="0" y="0" width="720" height="480" rx="16" fill="#1F2023"/>
+  <rect x="8" y="8" width="704" height="464" rx="10" fill="#F7F6F3"/>
+  <rect x="8" y="8" width="704" height="44" rx="10" fill="#ECEAE5"/>
+  <rect x="180" y="20" width="360" height="20" rx="10" fill="#fff" stroke="#E1DFD8"/>
+  <text x="200" y="34" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90">optimo.at/aussendienst/artikel</text>
+
+  <rect x="8" y="52" width="150" height="420" fill="#14151A"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="11">
+    <text x="28" y="82" fill="#B0AEA8">Übersicht</text>
+    <text x="28" y="108" fill="#B0AEA8">Kunden</text>
+    <rect x="28" y="122" width="110" height="28" rx="6" fill="#C8102E"/>
+    <text x="44" y="140" fill="#fff" font-weight="700">Artikel</text>
+    <text x="28" y="172" fill="#B0AEA8">Besuche</text>
+    <text x="28" y="196" fill="#B0AEA8">Aufträge</text>
+  </g>
+
+  <text x="182" y="84" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="600">KATALOG · BUSINESS CENTRAL</text>
+  <text x="182" y="108" font-family="Inter, Arial, sans-serif" font-size="20" fill="#1A1A1C" font-weight="700">Artikel</text>
+
+  <!-- Search + filters -->
+  <rect x="182" y="128" width="320" height="36" rx="8" fill="#fff" stroke="#E7E4DE"/>
+  <circle cx="204" cy="146" r="6" fill="none" stroke="#8A8A90" stroke-width="2"/>
+  <line x1="208" y1="150" x2="214" y2="156" stroke="#8A8A90" stroke-width="2" stroke-linecap="round"/>
+  <text x="224" y="150" font-family="Inter, Arial, sans-serif" font-size="12" fill="#B0AEA8">Artikel suchen…</text>
+
+  <rect x="512" y="128" width="82" height="36" rx="8" fill="#fff" stroke="#E7E4DE"/>
+  <text x="553" y="150" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Filter ▾</text>
+  <rect x="602" y="128" width="86" height="36" rx="8" fill="#1A1A1C"/>
+  <text x="645" y="150" font-family="Inter, Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">Angebot +</text>
+
+  <!-- Catalog grid -->
+  <g font-family="Inter, Arial, sans-serif">
+    <!-- Card 1 -->
+    <rect x="182" y="180" width="164" height="256" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <rect x="182" y="180" width="164" height="108" rx="10" fill="#ECEAE5"/>
+    <rect x="198" y="204" width="132" height="12" rx="3" fill="#C0BCB3"/>
+    <rect x="198" y="224" width="100" height="8" rx="2" fill="#D6D3CC"/>
+    <rect x="198" y="240" width="116" height="8" rx="2" fill="#D6D3CC"/>
+    <rect x="198" y="256" width="84" height="8" rx="2" fill="#D6D3CC"/>
+    <text x="198" y="308" font-size="10" fill="#8A8A90" font-weight="600">ART-4518</text>
+    <text x="198" y="326" font-size="13" fill="#1A1A1C" font-weight="700">Premium 140 × 200</text>
+    <text x="198" y="344" font-size="11" fill="#666">NextGen-Serie</text>
+    <text x="198" y="384" font-size="11" fill="#8A8A90">VK-Preis ab</text>
+    <text x="198" y="404" font-size="17" fill="#1A1A1C" font-weight="700">€ 1.240</text>
+    <rect x="198" y="414" width="100" height="4" rx="2" fill="#E8F2E9"/>
+    <text x="198" y="428" font-size="10" fill="#2F8F45" font-weight="600">auf Lager · 164</text>
+
+    <!-- Card 2 -->
+    <rect x="354" y="180" width="164" height="256" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <rect x="354" y="180" width="164" height="108" rx="10" fill="#ECEAE5"/>
+    <rect x="370" y="200" width="132" height="60" rx="6" fill="#D6D3CC"/>
+    <rect x="370" y="268" width="80" height="6" rx="2" fill="#C0BCB3"/>
+    <text x="370" y="308" font-size="10" fill="#8A8A90" font-weight="600">ART-4730</text>
+    <text x="370" y="326" font-size="13" fill="#1A1A1C" font-weight="700">Lattenrost Basic</text>
+    <text x="370" y="344" font-size="11" fill="#666">90 × 200</text>
+    <text x="370" y="384" font-size="11" fill="#8A8A90">VK-Preis ab</text>
+    <text x="370" y="404" font-size="17" fill="#1A1A1C" font-weight="700">€ 320</text>
+    <rect x="370" y="414" width="100" height="4" rx="2" fill="#FCEAED"/>
+    <text x="370" y="428" font-size="10" fill="#C8102E" font-weight="600">wenig Bestand · 8</text>
+
+    <!-- Card 3 -->
+    <rect x="526" y="180" width="162" height="256" rx="10" fill="#fff" stroke="#E7E4DE"/>
+    <rect x="526" y="180" width="162" height="108" rx="10" fill="#ECEAE5"/>
+    <circle cx="607" cy="234" r="40" fill="#D6D3CC"/>
+    <text x="542" y="308" font-size="10" fill="#8A8A90" font-weight="600">ART-5120</text>
+    <text x="542" y="326" font-size="13" fill="#1A1A1C" font-weight="700">Kissen Ergo</text>
+    <text x="542" y="344" font-size="11" fill="#666">Komfort-Linie</text>
+    <text x="542" y="384" font-size="11" fill="#8A8A90">VK-Preis ab</text>
+    <text x="542" y="404" font-size="17" fill="#1A1A1C" font-weight="700">€ 78</text>
+    <rect x="542" y="414" width="100" height="4" rx="2" fill="#E8F2E9"/>
+    <text x="542" y="428" font-size="10" fill="#2F8F45" font-weight="600">auf Lager · 412</text>
+  </g>
+
+  <text x="450" y="460" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>
