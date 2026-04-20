@@ -43,6 +43,10 @@ jobs:
           # (Hostinger's git pull) can fast-forward. Orphan commits broke
           # Hostinger's "Deploy" button with "divergent branches" errors.
           force_orphan: false
+          # Produce a deploy commit even when the build output is
+          # byte-identical — this keeps Hostinger's pull detector in
+          # sync with every main push.
+          allow_empty_commit: true
           commit_message: "Deploy from ${{ github.sha }}"
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
