@@ -1,0 +1,20 @@
+<?php
+// Template — do not deploy as-is.
+// The real config.php is generated once by /setup.php and stays out of git.
+// Copy this file to config.php manually only if you cannot use setup.php (rare).
+
+return [
+    // BCRYPT hashes generated via password_hash($password, PASSWORD_BCRYPT)
+    'visitor_password_hash' => '$2y$10$REPLACE_WITH_BCRYPT_HASH_OF_VISITOR_PASSWORD',
+    'admin_password_hash'   => '$2y$10$REPLACE_WITH_BCRYPT_HASH_OF_ADMIN_PASSWORD',
+
+    // Visitor session lifetime in seconds (default 8 h)
+    'session_ttl'   => 8 * 3600,
+
+    // Admin session lifetime in seconds (default 1 h)
+    'admin_ttl'     => 1 * 3600,
+
+    // Cookie name for the visitor session (kept generic to avoid signaling intent)
+    'cookie_name'       => 'optimo_session',
+    'admin_cookie_name' => 'optimo_admin',
+];

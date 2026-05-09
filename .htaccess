@@ -1,0 +1,44 @@
+# Optimo BC Roadmap — auth gate.
+# Without a valid visitor session cookie everything except the login flow,
+# the tracker endpoint and the admin area is redirected to /login.php.
+
+DirectoryIndex index.html index.php
+Options -Indexes
+
+# --- Hard denies -----------------------------------------------------------
+
+# Internal helper file, never meant to be served on its own.
+<Files "_lib.php">
+    Require all denied
+</Files>
+
+# Defense-in-depth — .private/.htaccess already denies access, this is the belt.
+RedirectMatch 403 ^/\.private(/|$)
+
+# --- Cache control ---------------------------------------------------------
+
+# HTML documents must always re-validate so a logout takes effect immediately
+# when the visitor navigates back. Hashed Astro asset filenames may be cached.
+<IfModule mod_headers.c>
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-store, private, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "\.(css|js|woff2|svg|png|jpg|jpeg|webp)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# --- Auth gate -------------------------------------------------------------
+
+RewriteEngine On
+
+# Always allow these paths, regardless of cookie:
+RewriteRule ^(login|logout|setup|track|admin|admin-login)\.php$ - [L]
+RewriteRule ^favicon\.svg$ - [L]
+RewriteRule ^robots\.txt$  - [L]
+
+# Everything else needs a valid-looking visitor session cookie
+# (32 hex chars = bin2hex(random_bytes(16))). The cookie is verified for real
+# inside PHP; this regex just keeps obvious unauthenticated traffic out.
+RewriteCond %{HTTP_COOKIE} !optimo_session=[a-f0-9]{32}
+RewriteRule . /login.php [R=302,L]
