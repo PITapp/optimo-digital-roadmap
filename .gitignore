@@ -29,3 +29,10 @@ Thumbs.db
 
 # Misc
 *.local
+
+# Auth / Tracking — never commit secrets or runtime data
+public/.private/config.php
+public/.private/db.sqlite
+public/.private/db.sqlite-journal
+public/.private/db.sqlite-wal
+public/.private/db.sqlite-shm

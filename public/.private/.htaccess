@@ -1,0 +1,3 @@
+# Hard deny: this directory holds the password hashes and the SQLite log database.
+# Nothing in here is ever served over HTTP.
+Require all denied
