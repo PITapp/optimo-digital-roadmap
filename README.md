@@ -1,9 +1,9 @@
-# Optimo Digital Roadmap
+# Optimo Business Central Roadmap
 
-Web-Präsentation **Optimo Digital Roadmap** — Modernisierungsvorschlag von
+Web-Präsentation **Optimo Business Central Roadmap** — Modernisierungsvorschlag von
 **PITapp** für die Firma Optimo. Eine statische, teilbare Seite, die
-den gesamten Vorschlag (Scanner-App, Außendienst-Web-App,
-Business-Central-Migration) an einem Ort bündelt.
+den gesamten Vorschlag (Scanner-App, Außendienst-Modul in Business
+Central, BC-Migration) an einem Ort bündelt.
 
 Dieses Dokument erklärt, was du **einmalig manuell** einrichten musst,
 damit jeder Push auf `main` automatisch live geht.
@@ -35,7 +35,7 @@ vom GitHub-Actions-Workflow auf den `deploy`-Branch gepusht.
    git add .
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/<dein-user>/optimo-digital-roadmap.git
+   git remote add origin https://github.com/<dein-user>/optimo-bc-roadmap.git
    git push -u origin main
    ```
 
@@ -51,7 +51,7 @@ vom GitHub-Actions-Workflow auf den `deploy`-Branch gepusht.
 
 1. Im Hostinger hPanel zur betreffenden Webseite wechseln.
 2. Unter **Erweitert → Git** ein neues Repository anlegen:
-   - **Repository-URL:** `https://github.com/<dein-user>/optimo-digital-roadmap.git`
+   - **Repository-URL:** `https://github.com/<dein-user>/optimo-bc-roadmap.git`
    - **Branch:** `deploy` (nicht `main`!)
    - **Zielverzeichnis:** `public_html` (oder das Unterverzeichnis
      der gewünschten Subdomain).

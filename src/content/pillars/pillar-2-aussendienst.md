@@ -2,29 +2,28 @@
 order: 2
 anchor: "aussendienst"
 eyebrow: "Säule 2"
-title: "Moderne Außendienst-Web-App"
-lede: "Das tägliche Werkzeug der Außendienstmitarbeiter — zeitgemäß, mobil, ohne Installation. Nachfolger des rund 20 Jahre alten Bestandsprogramms."
-situation: "Das heute eingesetzte Außendienst-Programm ist funktional noch nützlich, technisch aber am Ende seines Lebenszyklus. Die neue Web-App bietet dieselben und erweiterte Möglichkeiten — ohne Installation, auf jedem Endgerät, immer aktuell."
+title: "Modernes Außendienst-Modul in Business Central"
+lede: "Das tägliche Werkzeug der Außendienstmitarbeiter — als integriertes Modul direkt in der neuen Business-Central-Version. Aufgerufen im Browser auf dem Laptop, sicher über die bestehende VPN-Verbindung."
+situation: "Das heute eingesetzte Außendienst-Programm ist rund 20 Jahre alt — funktional noch nützlich, technisch aber am Ende seines Lebenszyklus. Statt einer eigenständigen App entsteht ein eigenes Rollencenter („Außendienst-Cockpit“) direkt in Business Central. Kein zusätzliches System, kein separates Login, keine doppelte Datenhaltung."
 features:
-  - title: "Verkaufszahlen"
-    description: "Umsätze, Kennzahlen und Entwicklungen pro Kunde und Artikel."
-  - title: "Artikelinformationen"
-    description: "Stammdaten, Preise und Verfügbarkeiten direkt aus Business Central."
-  - title: "Weitere Fachbereiche"
-    description: "Themenfelder aus dem Altsystem werden im Zuge der Modernisierung übernommen und ergänzt."
-keyMessage: "Das Werkzeug, das die Außendienstmitarbeiter täglich in Kundengesprächen brauchen — zeitgemäß, schnell, mobil, wartungsarm."
-galleryLayout: "screens"
-gallery:
-  - src: "/mockups/aussendienst-dashboard.svg"
-    alt: "Muster-Screenshot des Dashboards der Außendienst-Web-App"
-    caption: "Dashboard — Umsatzentwicklung, offene Aufträge und anstehende Kundenbesuche auf einen Blick."
-  - src: "/mockups/aussendienst-kunde.svg"
-    alt: "Muster-Screenshot einer Kundendetail-Ansicht in der Außendienst-Web-App"
-    caption: "Kundenmappe — KPIs, Historie und offene Posten aus Business Central, live im Kundengespräch."
-  - src: "/mockups/aussendienst-artikel.svg"
-    alt: "Muster-Screenshot des Artikelkatalogs in der Außendienst-Web-App"
-    caption: "Artikelkatalog — Bestände, Preise und Verfügbarkeit; Angebote direkt beim Kunden zusammenstellen."
+  - title: "Kunden- und Artikelinformationen"
+    description: "Schneller Zugriff auf Kundenstamm, Artikeldaten, Preise und aktuelle Lagerbestände — direkt aus der BC-Datenbasis."
+  - title: "Verkaufszahlen und Auswertungen"
+    description: "Eingebettete Power-BI-Reports im Rollencenter, automatisch gefiltert auf den jeweiligen Außendienstler. Deutlich stärkere Visualisierungen, als sie eine klassische Eigenentwicklung leisten könnte."
+  - title: "Tagesberichte"
+    description: "Strukturierte Erfassung der täglichen Aktivitäten — Kundenbesuche, Gesprächsinhalte, Notizen, Anhänge. Daten gehören dem Mitarbeiter, die Vertriebsleitung sieht aggregiert."
+  - title: "Fahrtkosten und Reisekosten"
+    description: "Eingabe von Fahrten, Spesen und Belegen direkt im Modul. Daten landen ohne Zwischenexport dort, wo sie buchhalterisch weiterverarbeitet werden."
+  - title: "Modular erweiterbar"
+    description: "Weitere Auswertungen und Funktionen — je nachdem, was aus dem Altprogramm übernommen oder im laufenden Betrieb neu gebraucht wird."
+keyMessage: "Ein System, ein Login, eine Datenquelle. Kein paralleler Betrieb von Außendienst-App und ERP, sondern echte Integration in die zentrale Plattform — möglich erst durch die neue BC-Version aus Säule 3."
 ---
 
-<!-- TODO: Langtext aus BRIEFING Kapitel 4.2 – konkrete Workflow-
-     Beispiele aus dem Außendienst-Alltag, Vergleich alt/neu. -->
+<!-- TODO: Optionaler Langtext / konkrete Workflow-Beispiele aus dem
+     Außendienst-Alltag entlang BRIEFING Kapitel 4.2. Vergleich
+     alt (separates 20-Jahre-Programm) vs. neu (integriertes BC-Modul)
+     anhand eines typischen Tagesablaufs.
+
+     Mockups: Stilisierter BC-Rollencenter-Screen folgt, sobald die
+     ersten Entwürfe vorliegen (siehe Briefing Kapitel 8). Bis dahin
+     bewusst keine Galerie in dieser Sektion. -->

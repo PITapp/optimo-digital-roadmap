@@ -1,7 +1,7 @@
-# Optimo Digital Roadmap — Kontext für Claude Code
+# Optimo Business Central Roadmap — Kontext für Claude Code
 
 Web-Präsentation für die Firma Optimo, erstellt von PITapp.
-Präsentationstitel: **Optimo Digital Roadmap**.
+Präsentationstitel: **Optimo Business Central Roadmap**.
 
 **Vollständiges Briefing:** Bitte immer zuerst `docs/BRIEFING.md` lesen.
 **Setup-Vorgehen:** Siehe `docs/claude-code-setup-prompt.md`.

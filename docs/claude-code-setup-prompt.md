@@ -1,4 +1,4 @@
-# Claude Code – Setup-Prompt für das Projekt „Optimo Digital Roadmap"
+# Claude Code – Setup-Prompt für das Projekt „Optimo Business Central Roadmap"
 
 > **Anweisung an Claude Code:** Lies diese Datei vollständig durch, bevor du irgendetwas tust. Folge den Schritten in der angegebenen Reihenfolge. **Schreibe noch keinen Anwendungscode**, bis Schritt 3 (Plan-Freigabe durch den Nutzer) abgeschlossen ist.
 
@@ -11,11 +11,11 @@ Dieses Projekt erstellt eine **moderne Web-Präsentation** für die Firma **Opti
 Die Präsentation wird über eine Webseite abrufbar sein und richtet sich an den **Vorstand und einzelne Mitarbeiter von Optimo**. Ziel ist es, drei Modernisierungs-Angebote strukturiert und überzeugend vorzustellen:
 
 1. **Scanner-App für Business Central** – moderne Web-App als Ersatz für die bestehende Scanner-Software. Funktionen: Inventur, Ladelisten (LKW-Beladung im Versand), Umlagerungen, Artikelinformationen.
-2. **Außendienst-Web-App** – moderne Ablösung des ca. 20 Jahre alten bestehenden Außendienst-Programms. Verkaufszahlen, Artikelinformationen und weitere Daten aus Business Central für Außendienstmitarbeiter.
+2. **Außendienst-Modul in Business Central** – moderne Ablösung des ca. 20 Jahre alten bestehenden Außendienst-Programms. Integriertes BC-Modul mit eigenem Rollencenter („Außendienst-Cockpit"), aufgerufen im BC-Webclient über die bestehende VPN-Verbindung. Funktionen: Kunden- und Artikelinformationen, Verkaufszahlen via eingebetteter Power-BI-Reports, Tagesberichte, Reisekostenerfassung.
 3. **Business-Central-Migration** – Migration von Business Central Version 14 auf die neueste on-prem-Version, inklusive Darstellung der Vorteile.
 
-**Projektname / Repo-Name:** `optimo-digital-roadmap`
-**Präsentationstitel:** Optimo Digital Roadmap
+**Projektname / Repo-Name:** `optimo-bc-roadmap`
+**Präsentationstitel:** Optimo Business Central Roadmap
 
 **Vollständiges Briefing:** Alle fachlichen Details, Zielgruppen, Argumente und offenen Punkte stehen in `docs/BRIEFING.md`. **Diese Datei ist die fachliche Grundwahrheit** – bei Widersprüchen gilt das Briefing, nicht diese Setup-Datei.
 
@@ -53,10 +53,10 @@ Erstelle einen schriftlichen Plan mit folgenden Punkten und lege ihn dem Nutzer 
 - **Projektstruktur** (Ordner-Baum mit kurzer Erklärung pro Ordner, passend zum Astro-Standard: `src/pages/`, `src/layouts/`, `src/components/`, `src/styles/`, `public/`, plus `.github/workflows/` für die Deployment-Action).
 - **Seitenarchitektur**: Eine durchgehende Landing-Page mit Scroll-Sektionen (`src/pages/index.astro` mit Section-Komponenten) ODER eine Multi-Page-Struktur (eine eigene Seite pro Säule)? Empfehlung begründen.
 - **Sektionen / Seitenaufbau** in dieser logischen Reihenfolge:
-  1. Hero / Titel (Optimo Digital Roadmap)
+  1. Hero / Titel (Optimo Business Central Roadmap)
   2. Management Summary
   3. Säule 1 – Scanner-App
-  4. Säule 2 – Außendienst-Web-App
+  4. Säule 2 – Außendienst-Modul in Business Central
   5. Säule 3 – Business-Central-Migration
   6. Gesamtbild / Roadmap
   7. Ansprechpartner PITapp / Kontakt
@@ -100,10 +100,10 @@ Nach Schritt 3 kurz zusammenfassen:
 Die `CLAUDE.md` soll kurz sein und bei jedem Claude-Code-Start automatisch als Kontext geladen werden. Sie soll folgenden Inhalt haben (anpassen, wenn im Plan etwas abweicht):
 
 ```markdown
-# Optimo Digital Roadmap – Kontext für Claude Code
+# Optimo Business Central Roadmap – Kontext für Claude Code
 
 Web-Präsentation für die Firma Optimo, erstellt von PITapp.
-Präsentationstitel: **Optimo Digital Roadmap**.
+Präsentationstitel: **Optimo Business Central Roadmap**.
 
 **Vollständiges Briefing:** Bitte immer zuerst `docs/BRIEFING.md` lesen.
 **Setup-Vorgehen:** Siehe `docs/claude-code-setup-prompt.md`.
@@ -155,7 +155,7 @@ Die `README.md` dokumentiert für den Nutzer die **einmaligen manuellen Einricht
 2. **Hostinger mit GitHub verbinden**
    - Im Hostinger hPanel zur betreffenden Webseite wechseln.
    - Unter **„Erweitert → Git"** ein neues Repository anlegen:
-     - Repository-URL: `https://github.com/<user>/optimo-digital-roadmap.git` (mit Platzhalter für den echten Benutzernamen).
+     - Repository-URL: `https://github.com/<user>/optimo-bc-roadmap.git` (mit Platzhalter für den echten Benutzernamen).
      - Branch: **`deploy`** (nicht `main`!).
      - Zielverzeichnis: `public_html` (oder Unterverzeichnis der gewünschten Subdomain).
    - Nach dem ersten Klonen auf **„Manage → Auto Deployment"** gehen und die dort angezeigte **Webhook-URL** kopieren.
