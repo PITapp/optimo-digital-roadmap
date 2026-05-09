@@ -13,7 +13,7 @@ if (is_setup_complete()) {
     echo '<p class="eyebrow">Setup</p>';
     echo '<h1>Bereits eingerichtet</h1>';
     echo '<p>Diese Setup-Seite wurde bereits einmal aufgerufen und ist deshalb deaktiviert.</p>';
-    echo '<p class="note">Falls Sie das Vorstands- oder Admin-Passwort zurücksetzen möchten, '
+    echo '<p class="note">Falls Sie das Zugangs- oder Admin-Passwort zurücksetzen möchten, '
        . 'müssen Sie die Datei <code>.private/config.php</code> auf dem Server entfernen — '
        . 'beim nächsten Deploy steht <code>setup.php</code> wieder zur Verfügung.</p>';
     echo '</div>';
@@ -32,15 +32,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ap2 = (string)($_POST['admin_password_confirm']   ?? '');
 
     if (mb_strlen($vp1) < 6) {
-        $error = 'Das Vorstands-Passwort muss mindestens 6 Zeichen haben.';
+        $error = 'Das Zugangspasswort muss mindestens 6 Zeichen haben.';
     } elseif ($vp1 !== $vp2) {
-        $error = 'Die beiden Vorstands-Passwörter stimmen nicht überein.';
+        $error = 'Die beiden Zugangspasswörter stimmen nicht überein.';
     } elseif (mb_strlen($ap1) < 8) {
         $error = 'Das Admin-Passwort muss mindestens 8 Zeichen haben.';
     } elseif ($ap1 !== $ap2) {
         $error = 'Die beiden Admin-Passwörter stimmen nicht überein.';
     } elseif ($vp1 === $ap1) {
-        $error = 'Vorstands- und Admin-Passwort müssen unterschiedlich sein.';
+        $error = 'Zugangs- und Admin-Passwort müssen unterschiedlich sein.';
     } else {
         // Write config atomically so a partial write never leaves a half-broken file.
         if (!is_dir(PRIVATE_DIR)) {
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo '<p class="eyebrow">Setup</p>';
             echo '<h1>Einrichtung abgeschlossen</h1>';
             echo '<div class="success">Die Passwörter sind gespeichert und die Setup-Seite wurde deaktiviert.</div>';
-            echo '<p>Sie können sich nun mit dem Vorstands-Passwort unter '
+            echo '<p>Sie können sich nun mit dem Zugangspasswort unter '
                . '<a href="/login.php">/login.php</a> anmelden, '
                . 'oder die Auswertung unter <a href="/admin-login.php">/admin-login.php</a> öffnen.</p>';
             echo '</div>';
@@ -90,7 +90,7 @@ page_head('Erst-Einrichtung');
   <p class="eyebrow">Setup</p>
   <h1>Passwörter festlegen</h1>
   <p>Diese Seite läuft nur einmal. Bitte legen Sie hier das gemeinsame
-     <strong>Vorstands-Passwort</strong> (für die Präsentations-Seite) und
+     <strong>Zugangspasswort</strong> (für die Präsentations-Seite) und
      ein separates <strong>Admin-Passwort</strong> (für die Log-Auswertung)
      fest. Beide werden als BCRYPT-Hash gespeichert; die Klartexte werden nicht abgelegt.</p>
 
@@ -99,10 +99,10 @@ page_head('Erst-Einrichtung');
   <?php endif; ?>
 
   <form method="post" autocomplete="off">
-    <label for="visitor_password">Vorstands-Passwort (mind. 6 Zeichen)</label>
+    <label for="visitor_password">Zugangspasswort (mind. 6 Zeichen)</label>
     <input id="visitor_password" name="visitor_password" type="password" required minlength="6">
 
-    <label for="visitor_password_confirm">Vorstands-Passwort wiederholen</label>
+    <label for="visitor_password_confirm">Zugangspasswort wiederholen</label>
     <input id="visitor_password_confirm" name="visitor_password_confirm" type="password" required minlength="6">
 
     <label for="admin_password">Admin-Passwort (mind. 8 Zeichen)</label>

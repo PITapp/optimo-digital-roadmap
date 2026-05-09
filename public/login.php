@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($name === '' || mb_strlen($name) < 2) {
         $error = 'Bitte geben Sie Ihren Namen ein (mindestens 2 Zeichen).';
     } elseif ($pw === '') {
-        $error = 'Bitte das Vorstands-Passwort eingeben.';
+        $error = 'Bitte das Zugangspasswort eingeben.';
     } elseif (!password_verify($pw, $cfg['visitor_password_hash'])) {
         // Constant delay to slow brute-force attempts; sub-second so legit users barely notice.
         usleep(400_000);
@@ -44,7 +44,7 @@ page_head('Anmelden');
   <p class="eyebrow">Vertrauliche Präsentation</p>
   <h1>Anmeldung</h1>
   <p>Diese Präsentation ist nur für autorisierte Empfänger zugänglich.
-     Bitte geben Sie Ihren Namen und das Vorstands-Passwort ein.</p>
+     Bitte geben Sie Ihren Namen und das Zugangspasswort ein.</p>
 
   <?php if ($error !== null): ?>
     <div class="error"><?= safe_html($error) ?></div>
@@ -55,7 +55,7 @@ page_head('Anmelden');
     <input id="name" name="name" type="text" required minlength="2" maxlength="80"
            value="<?= safe_html($name_prefill) ?>" autofocus>
 
-    <label for="password">Vorstands-Passwort</label>
+    <label for="password">Zugangspasswort</label>
     <input id="password" name="password" type="password" required>
 
     <button class="primary" type="submit">Anmelden</button>
