@@ -40,5 +40,8 @@ RewriteRule ^robots\.txt$  - [L]
 # Everything else needs a valid-looking visitor session cookie
 # (32 hex chars = bin2hex(random_bytes(16))). The cookie is verified for real
 # inside PHP; this regex just keeps obvious unauthenticated traffic out.
+# Pattern is `.*` not `.` so the empty per-directory URL (a request to `/`)
+# is also redirected — otherwise DirectoryIndex would serve index.html
+# unauthenticated.
 RewriteCond %{HTTP_COOKIE} !optimo_session=[a-f0-9]{32}
-RewriteRule . /login.php [R=302,L]
+RewriteRule .* /login.php [R=302,L]
