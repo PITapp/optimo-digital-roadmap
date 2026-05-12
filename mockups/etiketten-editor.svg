@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Muster-Screenshot: Etiketten-Editor auf einem Laptop">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Muster-Screenshot: Artikelkarte mit Etikettenparametern in Business Central auf einem Laptop">
   <!-- Laptop display bezel -->
   <rect x="0" y="0" width="800" height="440" rx="8" fill="#1F2023"/>
   <rect x="20" y="20" width="760" height="400" rx="3" fill="#F7F6F3"/>
@@ -10,171 +10,217 @@
   <line x1="0" y1="440" x2="800" y2="440" stroke="#0B0B0D" stroke-width="1"/>
 
   <!-- ===== Display content ===== -->
-  <!-- Top app bar -->
-  <rect x="20" y="20" width="760" height="44" rx="3" fill="#1A1A1C"/>
-  <circle cx="44" cy="42" r="10" fill="#C8102E"/>
-  <text x="44" y="46" font-family="Inter, Arial, sans-serif" font-size="11" fill="#fff" font-weight="700" text-anchor="middle">P</text>
-  <text x="64" y="46" font-family="Inter, Arial, sans-serif" font-size="13" fill="#fff" font-weight="700">Optimo · Etiketten</text>
-  <text x="220" y="46" font-family="Inter, Arial, sans-serif" font-size="11" fill="#B0AEA8">Editor · Bibliothek · Vorlagen · Druckaufträge</text>
-  <rect x="660" y="32" width="92" height="20" rx="5" fill="#C8102E"/>
-  <text x="706" y="46" font-family="Inter, Arial, sans-serif" font-size="11" fill="#fff" font-weight="700" text-anchor="middle">Druck starten</text>
+  <!-- Top app bar (Business Central style) -->
+  <rect x="20" y="20" width="760" height="40" rx="3" fill="#1A1A1C"/>
+
+  <!-- BC waffle / app launcher -->
+  <g fill="#fff">
+    <rect x="36" y="34" width="3" height="3"/>
+    <rect x="42" y="34" width="3" height="3"/>
+    <rect x="48" y="34" width="3" height="3"/>
+    <rect x="36" y="40" width="3" height="3"/>
+    <rect x="42" y="40" width="3" height="3"/>
+    <rect x="48" y="40" width="3" height="3"/>
+    <rect x="36" y="46" width="3" height="3"/>
+    <rect x="42" y="46" width="3" height="3"/>
+    <rect x="48" y="46" width="3" height="3"/>
+  </g>
+
+  <text x="64" y="45" font-family="Inter, Arial, sans-serif" font-size="13" fill="#fff" font-weight="700">Dynamics 365 Business Central</text>
+  <text x="294" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#B0AEA8">Optimo · Produktion</text>
+
+  <!-- Search field -->
+  <rect x="520" y="30" width="180" height="20" rx="3" fill="#2A2D33"/>
+  <circle cx="532" cy="40" r="4" fill="none" stroke="#8A8A90" stroke-width="1.2"/>
+  <line x1="535" y1="43" x2="538" y2="46" stroke="#8A8A90" stroke-width="1.2"/>
+  <text x="544" y="44" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90">Suchen (Strg + F3)</text>
+
+  <!-- Notifications + avatar -->
+  <circle cx="722" cy="40" r="5" fill="none" stroke="#B0AEA8" stroke-width="1.2"/>
+  <path d="M719 39 q3 -3 6 0" fill="none" stroke="#B0AEA8" stroke-width="1.2"/>
+  <circle cx="754" cy="40" r="10" fill="#C8102E"/>
+  <text x="754" y="44" font-family="Inter, Arial, sans-serif" font-size="9" fill="#fff" font-weight="700" text-anchor="middle">SB</text>
 
   <!-- Breadcrumb -->
-  <text x="44" y="86" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90">Vorlagen  ›  Matratze Comfort 120 × 200  ·  Version 4</text>
+  <text x="36" y="82" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90">Artikel  ›  ART-4502  ·  Matratze Comfort</text>
 
-  <!-- ============ LEFT: Symbol palette ============ -->
-  <rect x="44" y="98" width="160" height="312" rx="6" fill="#fff" stroke="#E7E4DE"/>
-  <text x="60" y="118" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.5">SYMBOL-PALETTE</text>
+  <!-- Action ribbon -->
+  <rect x="36" y="94" width="708" height="30" rx="3" fill="#fff" stroke="#E7E4DE"/>
+  <text x="52" y="113" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" font-weight="700">Start</text>
+  <rect x="48" y="118" width="34" height="2" fill="#C8102E"/>
+  <text x="100" y="113" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90">Aktionen</text>
+  <text x="160" y="113" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90">Navigieren</text>
+  <text x="232" y="113" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90">Bericht</text>
 
-  <!-- Group: Logos -->
-  <text x="60" y="138" font-family="Inter, Arial, sans-serif" font-size="10" fill="#1A1A1C" font-weight="700">Logos &amp; Marken</text>
-  <g>
-    <rect x="60" y="144" width="36" height="28" rx="4" fill="#ECEAE5" stroke="#C8102E" stroke-width="1.5"/>
-    <text x="78" y="162" font-family="Inter, Arial, sans-serif" font-size="9" fill="#C8102E" font-weight="700" text-anchor="middle">OPT</text>
-    <rect x="100" y="144" width="36" height="28" rx="4" fill="#ECEAE5"/>
-    <text x="118" y="162" font-family="Inter, Arial, sans-serif" font-size="8" fill="#8A8A90" font-weight="700" text-anchor="middle">NextGen</text>
-    <rect x="140" y="144" width="36" height="28" rx="4" fill="#ECEAE5"/>
-    <circle cx="158" cy="158" r="6" fill="none" stroke="#8A8A90" stroke-width="1.5"/>
-  </g>
+  <line x1="290" y1="100" x2="290" y2="118" stroke="#E7E4DE"/>
 
-  <!-- Group: Recycling -->
-  <text x="60" y="194" font-family="Inter, Arial, sans-serif" font-size="10" fill="#1A1A1C" font-weight="700">Recycling</text>
-  <g>
-    <rect x="60" y="200" width="28" height="28" rx="4" fill="#ECEAE5"/>
-    <path d="M68 218 l4 -8 l4 8 l-4 -2 l-4 2 z M72 207 l4 4 l-4 0 z M76 215 l-4 4 l0 -4 z" fill="#2F8F45"/>
-    <rect x="92" y="200" width="28" height="28" rx="4" fill="#ECEAE5"/>
-    <text x="106" y="218" font-family="Inter, Arial, sans-serif" font-size="9" fill="#2F8F45" font-weight="700" text-anchor="middle">FSC</text>
-    <rect x="124" y="200" width="28" height="28" rx="4" fill="#ECEAE5"/>
-    <text x="138" y="218" font-family="Inter, Arial, sans-serif" font-size="9" fill="#666" font-weight="700" text-anchor="middle">PE</text>
-    <rect x="156" y="200" width="28" height="28" rx="4" fill="#ECEAE5"/>
-    <text x="170" y="218" font-family="Inter, Arial, sans-serif" font-size="9" fill="#666" font-weight="700" text-anchor="middle">04</text>
-  </g>
+  <rect x="304" y="100" width="116" height="18" rx="3" fill="#C8102E"/>
+  <text x="362" y="113" font-family="Inter, Arial, sans-serif" font-size="10" fill="#fff" font-weight="700" text-anchor="middle">Etikett drucken</text>
 
-  <!-- Group: Pflege -->
-  <text x="60" y="250" font-family="Inter, Arial, sans-serif" font-size="10" fill="#1A1A1C" font-weight="700">Pflege</text>
-  <g>
-    <rect x="60" y="256" width="28" height="28" rx="4" fill="#ECEAE5"/>
-    <path d="M68 268 q6 -8 12 0 q-6 8 -12 0 z" fill="none" stroke="#1A1A1C" stroke-width="1.4"/>
-    <text x="74" y="280" font-family="Inter, Arial, sans-serif" font-size="7" fill="#1A1A1C" font-weight="700" text-anchor="middle">30°</text>
-    <rect x="92" y="256" width="28" height="28" rx="4" fill="#ECEAE5"/>
-    <circle cx="106" cy="270" r="7" fill="none" stroke="#1A1A1C" stroke-width="1.4"/>
-    <text x="106" y="274" font-family="Inter, Arial, sans-serif" font-size="9" fill="#1A1A1C" font-weight="700" text-anchor="middle">P</text>
-    <rect x="124" y="256" width="28" height="28" rx="4" fill="#ECEAE5"/>
-    <rect x="130" y="262" width="16" height="16" rx="2" fill="none" stroke="#1A1A1C" stroke-width="1.4"/>
-    <rect x="156" y="256" width="28" height="28" rx="4" fill="#ECEAE5"/>
-    <path d="M162 264 l16 16 M178 264 l-16 16" stroke="#C8102E" stroke-width="1.4"/>
-  </g>
+  <rect x="428" y="100" width="92" height="18" rx="3" fill="#fff" stroke="#1A1A1C" stroke-width="1"/>
+  <text x="474" y="113" font-family="Inter, Arial, sans-serif" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">PDF-Vorschau</text>
 
-  <!-- Group: Hinweise -->
-  <text x="60" y="306" font-family="Inter, Arial, sans-serif" font-size="10" fill="#1A1A1C" font-weight="700">Hinweistexte</text>
-  <rect x="60" y="312" width="124" height="22" rx="4" fill="#FFF8E6" stroke="#E8D88A"/>
-  <text x="68" y="326" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A6F1A" font-weight="600">elektrische Federleiste</text>
-  <rect x="60" y="338" width="124" height="22" rx="4" fill="#ECEAE5"/>
-  <text x="68" y="352" font-family="Inter, Arial, sans-serif" font-size="9" fill="#666" font-weight="600">Härtegrad H3</text>
-  <rect x="60" y="364" width="124" height="22" rx="4" fill="#ECEAE5"/>
-  <text x="68" y="378" font-family="Inter, Arial, sans-serif" font-size="9" fill="#666" font-weight="600">Made in Austria</text>
+  <rect x="528" y="100" width="96" height="18" rx="3" fill="#fff" stroke="#E7E4DE"/>
+  <text x="576" y="113" font-family="Inter, Arial, sans-serif" font-size="10" fill="#1A1A1C" font-weight="600" text-anchor="middle">Druckhistorie</text>
 
-  <text x="60" y="402" font-family="Inter, Arial, sans-serif" font-size="9" fill="#C8102E" font-weight="700">+ neuen Baustein</text>
+  <!-- Page heading -->
+  <text x="36" y="152" font-family="Inter, Arial, sans-serif" font-size="19" fill="#1A1A1C" font-weight="700">ART-4502 · Matratze Comfort 120 × 200</text>
+  <text x="36" y="170" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90">Artikelkarte · Härtegrad H3 · Charge 2026-19</text>
 
-  <!-- ============ CENTER: Label preview canvas ============ -->
-  <rect x="214" y="98" width="396" height="312" rx="6" fill="#EEECE7"/>
-  <text x="412" y="118" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.5" text-anchor="middle">LIVE-VORSCHAU</text>
+  <!-- FastTab strip -->
+  <line x1="36" y1="190" x2="744" y2="190" stroke="#E7E4DE"/>
+  <text x="40" y="207" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600">Allgemein</text>
+  <text x="106" y="207" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600">Lager</text>
+  <text x="146" y="207" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600">Preise</text>
+  <text x="194" y="207" font-family="Inter, Arial, sans-serif" font-size="11" fill="#C8102E" font-weight="700">Etikettenparameter</text>
+  <rect x="190" y="213" width="118" height="2" fill="#C8102E"/>
+  <text x="324" y="207" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600">Buchung</text>
+  <text x="380" y="207" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600">Übersetzungen</text>
 
-  <!-- The label itself, centered -->
-  <rect x="290" y="128" width="244" height="270" rx="3" fill="#fff" stroke="#1A1A1C" stroke-width="0.8"/>
-
-  <!-- Label content: brand block -->
-  <rect x="290" y="128" width="244" height="46" fill="#C8102E"/>
-  <text x="412" y="156" font-family="Inter, Arial, sans-serif" font-size="20" fill="#fff" font-weight="800" text-anchor="middle" letter-spacing="3">OPTIMO</text>
-  <text x="412" y="168" font-family="Inter, Arial, sans-serif" font-size="8" fill="#fff" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.85">SCHLAFSYSTEME</text>
-
-  <!-- Product name -->
-  <text x="412" y="194" font-family="Inter, Arial, sans-serif" font-size="13" fill="#1A1A1C" font-weight="700" text-anchor="middle">Matratze Comfort</text>
-  <text x="412" y="210" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" text-anchor="middle">120 × 200 cm · Härtegrad H3</text>
-
-  <line x1="306" y1="222" x2="518" y2="222" stroke="#E7E4DE"/>
-
-  <!-- Symbol row -->
-  <g>
-    <rect x="306" y="232" width="32" height="32" rx="3" fill="#F7F6F3"/>
-    <path d="M316 252 l4 -8 l4 8 l-4 -2 l-4 2 z M320 240 l5 5 l-5 0 z M325 248 l-5 5 l0 -5 z" fill="#2F8F45"/>
-    <rect x="346" y="232" width="32" height="32" rx="3" fill="#F7F6F3"/>
-    <text x="362" y="252" font-family="Inter, Arial, sans-serif" font-size="9" fill="#2F8F45" font-weight="700" text-anchor="middle">FSC</text>
-    <rect x="386" y="232" width="32" height="32" rx="3" fill="#F7F6F3"/>
-    <path d="M396 244 q6 -8 12 0 q-6 8 -12 0 z" fill="none" stroke="#1A1A1C" stroke-width="1.4"/>
-    <text x="402" y="260" font-family="Inter, Arial, sans-serif" font-size="8" fill="#1A1A1C" font-weight="700" text-anchor="middle">30°</text>
-    <rect x="426" y="232" width="32" height="32" rx="3" fill="#F7F6F3"/>
-    <circle cx="442" cy="248" r="8" fill="none" stroke="#1A1A1C" stroke-width="1.4"/>
-    <text x="442" y="253" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" font-weight="700" text-anchor="middle">P</text>
-    <rect x="466" y="232" width="32" height="32" rx="3" fill="#F7F6F3"/>
-    <path d="M474 246 l5 5 M474 251 l5 -5" stroke="#1A1A1C" stroke-width="1.4"/>
-  </g>
-
-  <!-- Hint text -->
-  <rect x="306" y="276" width="212" height="22" rx="3" fill="#FFF8E6" stroke="#E8D88A"/>
-  <text x="412" y="290" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A6F1A" font-weight="700" text-anchor="middle">⚡ elektrische Federleiste</text>
-
-  <line x1="306" y1="312" x2="518" y2="312" stroke="#E7E4DE"/>
-
-  <!-- Footer block: article info -->
-  <text x="306" y="328" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600">ART-NR.</text>
-  <text x="306" y="342" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" font-weight="700">ART-4502</text>
-  <text x="306" y="358" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600">CHARGE 2026-19 · MADE IN AUSTRIA</text>
-
-  <!-- Barcode -->
-  <g stroke="#1A1A1C" stroke-width="1.2">
-    <line x1="446" y1="326" x2="446" y2="358"/>
-    <line x1="450" y1="326" x2="450" y2="358" stroke-width="2"/>
-    <line x1="455" y1="326" x2="455" y2="358"/>
-    <line x1="458" y1="326" x2="458" y2="358"/>
-    <line x1="463" y1="326" x2="463" y2="358" stroke-width="2"/>
-    <line x1="468" y1="326" x2="468" y2="358"/>
-    <line x1="472" y1="326" x2="472" y2="358" stroke-width="2"/>
-    <line x1="478" y1="326" x2="478" y2="358"/>
-    <line x1="482" y1="326" x2="482" y2="358"/>
-    <line x1="487" y1="326" x2="487" y2="358" stroke-width="2"/>
-    <line x1="491" y1="326" x2="491" y2="358"/>
-    <line x1="496" y1="326" x2="496" y2="358" stroke-width="2"/>
-    <line x1="501" y1="326" x2="501" y2="358"/>
-    <line x1="506" y1="326" x2="506" y2="358"/>
-    <line x1="511" y1="326" x2="511" y2="358" stroke-width="2"/>
-  </g>
-  <text x="478" y="372" font-family="Inter, Arial, sans-serif" font-size="9" fill="#1A1A1C" font-weight="700" text-anchor="middle">4502 120200 H3</text>
-
-  <!-- Canvas hint -->
-  <text x="412" y="396" font-family="Inter, Arial, sans-serif" font-size="8" fill="#B0AEA8" text-anchor="middle">Etikett 105 × 148 mm · 1:1</text>
-
-  <!-- ============ RIGHT: parameter panel ============ -->
-  <rect x="620" y="98" width="160" height="312" rx="6" fill="#fff" stroke="#E7E4DE"/>
-  <text x="636" y="118" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.5">PARAMETER</text>
+  <!-- ============ FastTab body: 3 columns ============ -->
+  <!-- LEFT: parameter form -->
+  <rect x="36" y="226" width="276" height="184" rx="6" fill="#fff" stroke="#E7E4DE"/>
+  <text x="50" y="244" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.5">PARAMETER</text>
 
   <g font-family="Inter, Arial, sans-serif">
-    <text x="636" y="138" font-size="9" fill="#8A8A90" font-weight="600">PRODUKTART</text>
-    <text x="636" y="152" font-size="11" fill="#1A1A1C" font-weight="600">Matratze</text>
-    <line x1="636" y1="160" x2="764" y2="160" stroke="#F0EDE6"/>
+    <text x="50" y="262" font-size="9" fill="#8A8A90" font-weight="600">VORLAGE</text>
+    <text x="50" y="276" font-size="11" fill="#1A1A1C" font-weight="600">Matratze Standard 105 × 148</text>
+    <line x1="50" y1="284" x2="298" y2="284" stroke="#F0EDE6"/>
 
-    <text x="636" y="176" font-size="9" fill="#8A8A90" font-weight="600">GRÖSSE</text>
-    <text x="636" y="190" font-size="11" fill="#1A1A1C" font-weight="600">120 × 200 cm</text>
-    <line x1="636" y1="198" x2="764" y2="198" stroke="#F0EDE6"/>
+    <text x="50" y="300" font-size="9" fill="#8A8A90" font-weight="600">GRÖSSE  ·  HÄRTEGRAD</text>
+    <text x="50" y="314" font-size="11" fill="#1A1A1C" font-weight="600">120 × 200 cm  ·  H3 · mittel</text>
+    <line x1="50" y1="322" x2="298" y2="322" stroke="#F0EDE6"/>
 
-    <text x="636" y="214" font-size="9" fill="#8A8A90" font-weight="600">HÄRTEGRAD</text>
-    <text x="636" y="228" font-size="11" fill="#1A1A1C" font-weight="600">H3 · mittel</text>
-    <line x1="636" y1="236" x2="764" y2="236" stroke="#F0EDE6"/>
+    <text x="50" y="338" font-size="9" fill="#8A8A90" font-weight="600">HINWEISTEXT</text>
+    <text x="50" y="352" font-size="11" fill="#C8102E" font-weight="600">⚡ elektrische Federleiste</text>
+    <line x1="50" y1="360" x2="298" y2="360" stroke="#F0EDE6"/>
 
-    <text x="636" y="252" font-size="9" fill="#8A8A90" font-weight="600">ZERTIFIKATE</text>
-    <text x="636" y="266" font-size="11" fill="#1A1A1C" font-weight="600">FSC, Öko-Tex</text>
-    <line x1="636" y1="274" x2="764" y2="274" stroke="#F0EDE6"/>
-
-    <text x="636" y="290" font-size="9" fill="#8A8A90" font-weight="600">HINWEISE</text>
-    <text x="636" y="304" font-size="11" fill="#C8102E" font-weight="600">El. Federleiste</text>
-    <line x1="636" y1="312" x2="764" y2="312" stroke="#F0EDE6"/>
-
-    <text x="636" y="328" font-size="9" fill="#8A8A90" font-weight="600">VERSION</text>
-    <text x="636" y="342" font-size="11" fill="#1A1A1C" font-weight="600">v4 · 12.05.2026</text>
+    <text x="50" y="376" font-size="9" fill="#8A8A90" font-weight="600">SPRACHEN</text>
+    <text x="50" y="390" font-size="11" fill="#1A1A1C" font-weight="600">DE  ·  EN</text>
+    <line x1="50" y1="398" x2="298" y2="398" stroke="#F0EDE6"/>
   </g>
 
-  <rect x="636" y="370" width="128" height="28" rx="5" fill="#1A1A1C"/>
-  <text x="700" y="388" font-family="Inter, Arial, sans-serif" font-size="11" fill="#fff" font-weight="700" text-anchor="middle">Auf BC-Werten zurück</text>
+  <!-- MIDDLE: active bricks -->
+  <rect x="320" y="226" width="244" height="184" rx="6" fill="#fff" stroke="#E7E4DE"/>
+  <text x="334" y="244" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.5">AKTIVE BAUSTEINE</text>
+  <text x="552" y="244" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600" text-anchor="end">7 / 238</text>
+
+  <!-- Bauelement chips: 2 rows of 4 -->
+  <g>
+    <!-- Optimo logo -->
+    <rect x="334" y="252" width="50" height="30" rx="3" fill="#C8102E"/>
+    <text x="359" y="271" font-family="Inter, Arial, sans-serif" font-size="9" fill="#fff" font-weight="800" text-anchor="middle" letter-spacing="1">OPTIMO</text>
+
+    <!-- FSC -->
+    <rect x="388" y="252" width="50" height="30" rx="3" fill="#ECEAE5"/>
+    <text x="413" y="271" font-family="Inter, Arial, sans-serif" font-size="11" fill="#2F8F45" font-weight="700" text-anchor="middle">FSC</text>
+
+    <!-- Recycling -->
+    <rect x="442" y="252" width="50" height="30" rx="3" fill="#ECEAE5"/>
+    <path d="M461 272 l5 -9 l5 9 l-5 -2 l-5 2 z M466 261 l5 5 l-5 0 z M471 269 l-5 5 l0 -5 z" fill="#2F8F45"/>
+
+    <!-- Made in AT flag -->
+    <rect x="496" y="252" width="50" height="30" rx="3" fill="#ECEAE5"/>
+    <rect x="513" y="258" width="16" height="20" fill="#fff" stroke="#1A1A1C" stroke-width="0.6"/>
+    <rect x="513" y="258" width="16" height="6" fill="#C8102E"/>
+    <rect x="513" y="272" width="16" height="6" fill="#C8102E"/>
+
+    <!-- Row 2 -->
+    <!-- Pflege 30° -->
+    <rect x="334" y="286" width="50" height="30" rx="3" fill="#ECEAE5"/>
+    <path d="M347 304 q6 -8 12 0 q-6 8 -12 0 z" fill="none" stroke="#1A1A1C" stroke-width="1.2"/>
+    <text x="372" y="306" font-family="Inter, Arial, sans-serif" font-size="9" fill="#1A1A1C" font-weight="700" text-anchor="middle">30°</text>
+
+    <!-- Profi-Pflege -->
+    <rect x="388" y="286" width="50" height="30" rx="3" fill="#ECEAE5"/>
+    <circle cx="413" cy="301" r="8" fill="none" stroke="#1A1A1C" stroke-width="1.2"/>
+    <text x="413" y="305" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" font-weight="700" text-anchor="middle">P</text>
+
+    <!-- CE -->
+    <rect x="442" y="286" width="50" height="30" rx="3" fill="#ECEAE5"/>
+    <text x="467" y="306" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" font-weight="700" text-anchor="middle">CE</text>
+
+    <!-- + add -->
+    <rect x="496" y="286" width="50" height="30" rx="3" fill="#fff" stroke="#C8102E" stroke-width="1.2" stroke-dasharray="3 2"/>
+    <text x="521" y="306" font-family="Inter, Arial, sans-serif" font-size="14" fill="#C8102E" font-weight="700" text-anchor="middle">+</text>
+  </g>
+
+  <line x1="334" y1="332" x2="552" y2="332" stroke="#F0EDE6"/>
+
+  <text x="334" y="350" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.2">BIBLIOTHEK</text>
+  <text x="334" y="364" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C">Bausteine aus zentraler BC-Bibliothek</text>
+  <text x="334" y="378" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90">238 Bausteine · 12 Gruppen · versioniert</text>
+
+  <text x="334" y="398" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.2">LETZTER DRUCK</text>
+  <text x="334" y="412" font-family="Inter, Arial, sans-serif" font-size="10" fill="#1A1A1C" font-weight="600">12.05.2026  ·  240 Stück  ·  v4</text>
+
+  <!-- RIGHT FACTBOX: small preview -->
+  <rect x="572" y="226" width="172" height="184" rx="6" fill="#fff" stroke="#E7E4DE"/>
+  <text x="586" y="244" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.5">DRUCKVORSCHAU</text>
+
+  <!-- Mini label -->
+  <rect x="592" y="252" width="132" height="142" rx="2" fill="#fff" stroke="#1A1A1C" stroke-width="0.6"/>
+  <rect x="592" y="252" width="132" height="26" fill="#C8102E"/>
+  <text x="658" y="270" font-family="Inter, Arial, sans-serif" font-size="11" fill="#fff" font-weight="800" text-anchor="middle" letter-spacing="2">OPTIMO</text>
+
+  <text x="658" y="292" font-family="Inter, Arial, sans-serif" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">Matratze Comfort</text>
+  <text x="658" y="305" font-family="Inter, Arial, sans-serif" font-size="8" fill="#1A1A1C" text-anchor="middle">120 × 200 · H3</text>
+
+  <!-- Mini symbol row -->
+  <g>
+    <rect x="600" y="312" width="16" height="16" rx="2" fill="#F7F6F3"/>
+    <text x="608" y="323" font-family="Inter, Arial, sans-serif" font-size="6" fill="#2F8F45" font-weight="700" text-anchor="middle">FSC</text>
+
+    <rect x="620" y="312" width="16" height="16" rx="2" fill="#F7F6F3"/>
+    <path d="M626 324 l2 -4 l2 4 l-2 -1 l-2 1 z M628 318 l2 2 l-2 0 z" fill="#2F8F45"/>
+
+    <rect x="640" y="312" width="16" height="16" rx="2" fill="#F7F6F3"/>
+    <path d="M644 322 q4 -5 8 0 q-4 5 -8 0 z" fill="none" stroke="#1A1A1C" stroke-width="0.7"/>
+    <text x="648" y="328" font-family="Inter, Arial, sans-serif" font-size="5" fill="#1A1A1C" font-weight="700" text-anchor="middle">30°</text>
+
+    <rect x="660" y="312" width="16" height="16" rx="2" fill="#F7F6F3"/>
+    <circle cx="668" cy="320" r="4" fill="none" stroke="#1A1A1C" stroke-width="0.7"/>
+    <text x="668" y="323" font-family="Inter, Arial, sans-serif" font-size="6" fill="#1A1A1C" font-weight="700" text-anchor="middle">P</text>
+
+    <rect x="680" y="312" width="16" height="16" rx="2" fill="#F7F6F3"/>
+    <text x="688" y="324" font-family="Inter, Arial, sans-serif" font-size="7" fill="#1A1A1C" font-weight="800" text-anchor="middle">CE</text>
+
+    <rect x="700" y="312" width="16" height="16" rx="2" fill="#F7F6F3"/>
+    <rect x="705" y="316" width="6" height="8" fill="#fff" stroke="#1A1A1C" stroke-width="0.4"/>
+    <rect x="705" y="316" width="6" height="2" fill="#C8102E"/>
+    <rect x="705" y="322" width="6" height="2" fill="#C8102E"/>
+  </g>
+
+  <!-- Hint badge -->
+  <rect x="600" y="334" width="116" height="14" rx="2" fill="#FFF8E6" stroke="#E8D88A"/>
+  <text x="658" y="344" font-family="Inter, Arial, sans-serif" font-size="7" fill="#8A6F1A" font-weight="700" text-anchor="middle">⚡ El. FEDERLEISTE</text>
+
+  <!-- Barcode mini -->
+  <g stroke="#1A1A1C" stroke-width="0.8">
+    <line x1="616" y1="356" x2="616" y2="378"/>
+    <line x1="619" y1="356" x2="619" y2="378" stroke-width="1.5"/>
+    <line x1="623" y1="356" x2="623" y2="378"/>
+    <line x1="627" y1="356" x2="627" y2="378" stroke-width="1.5"/>
+    <line x1="631" y1="356" x2="631" y2="378"/>
+    <line x1="635" y1="356" x2="635" y2="378"/>
+    <line x1="639" y1="356" x2="639" y2="378" stroke-width="1.5"/>
+    <line x1="643" y1="356" x2="643" y2="378"/>
+    <line x1="647" y1="356" x2="647" y2="378" stroke-width="1.5"/>
+    <line x1="651" y1="356" x2="651" y2="378"/>
+    <line x1="655" y1="356" x2="655" y2="378" stroke-width="1.5"/>
+    <line x1="659" y1="356" x2="659" y2="378"/>
+    <line x1="663" y1="356" x2="663" y2="378"/>
+    <line x1="667" y1="356" x2="667" y2="378" stroke-width="1.5"/>
+    <line x1="671" y1="356" x2="671" y2="378"/>
+    <line x1="675" y1="356" x2="675" y2="378" stroke-width="1.5"/>
+    <line x1="679" y1="356" x2="679" y2="378"/>
+    <line x1="683" y1="356" x2="683" y2="378"/>
+    <line x1="687" y1="356" x2="687" y2="378" stroke-width="1.5"/>
+    <line x1="691" y1="356" x2="691" y2="378"/>
+    <line x1="695" y1="356" x2="695" y2="378" stroke-width="1.5"/>
+    <line x1="699" y1="356" x2="699" y2="378"/>
+  </g>
+  <text x="658" y="388" font-family="Inter, Arial, sans-serif" font-size="6" fill="#1A1A1C" font-weight="700" text-anchor="middle">4502 120200 H3</text>
 
   <!-- Watermark -->
   <text x="400" y="492" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
