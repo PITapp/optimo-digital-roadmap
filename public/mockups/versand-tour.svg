@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" role="img" aria-label="Muster-Screenshot: Tourenuebersicht der Versand-App auf einem Tablet">
+  <!-- Tablet frame -->
+  <rect x="0" y="0" width="480" height="640" rx="24" fill="#1F2023"/>
+  <rect x="14" y="14" width="452" height="612" rx="14" fill="#F7F6F3"/>
+  <!-- Camera dot -->
+  <circle cx="240" cy="26" r="3" fill="#0B0B0D"/>
+
+  <!-- App header -->
+  <rect x="32" y="48" width="416" height="56" rx="10" fill="#ECEAE5"/>
+  <text x="48" y="71" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600">TOUR 042 · TAG 1 VON 3</text>
+  <text x="48" y="92" font-family="Inter, Arial, sans-serif" font-size="17" fill="#1A1A1C" font-weight="700">8 Stopps heute</text>
+  <rect x="386" y="63" width="50" height="26" rx="13" fill="#2F8F45"/>
+  <text x="411" y="81" font-family="Inter, Arial, sans-serif" font-size="11" fill="#fff" font-weight="700" text-anchor="middle">3 / 8</text>
+
+  <!-- Progress bar -->
+  <rect x="32" y="118" width="416" height="6" rx="3" fill="#E7E4DE"/>
+  <rect x="32" y="118" width="156" height="6" rx="3" fill="#C8102E"/>
+
+  <!-- Section label -->
+  <text x="32" y="146" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.5">STOPPS</text>
+  <text x="248" y="146" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.5">NÄCHSTER STOPP</text>
+
+  <!-- LEFT COLUMN: stop list -->
+  <g font-family="Inter, Arial, sans-serif">
+    <!-- Stop 1: done -->
+    <rect x="32" y="156" width="208" height="56" rx="8" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="50" cy="184" r="10" fill="#E8F2E9"/>
+    <path d="M45 184 l3 3 l7 -7" stroke="#2F8F45" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <text x="68" y="176" font-size="9" fill="#8A8A90" font-weight="600">08:14 · STOPP 1</text>
+    <text x="68" y="192" font-size="12" fill="#1A1A1C" font-weight="700">Möbelhaus Steiner GmbH</text>
+    <text x="68" y="205" font-size="10" fill="#666">4020 Linz · zugestellt</text>
+
+    <!-- Stop 2: done -->
+    <rect x="32" y="220" width="208" height="56" rx="8" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="50" cy="248" r="10" fill="#E8F2E9"/>
+    <path d="M45 248 l3 3 l7 -7" stroke="#2F8F45" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <text x="68" y="240" font-size="9" fill="#8A8A90" font-weight="600">09:42 · STOPP 2</text>
+    <text x="68" y="256" font-size="12" fill="#1A1A1C" font-weight="700">Schlafwelt Wieser KG</text>
+    <text x="68" y="269" font-size="10" fill="#666">4040 Linz · teilweise zugestellt</text>
+
+    <!-- Stop 3: active -->
+    <rect x="32" y="284" width="208" height="56" rx="8" fill="#FCEAED" stroke="#C8102E" stroke-width="1.5"/>
+    <circle cx="50" cy="312" r="10" fill="#C8102E"/>
+    <text x="50" y="316" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">3</text>
+    <text x="68" y="304" font-size="9" fill="#C8102E" font-weight="700">JETZT · STOPP 3</text>
+    <text x="68" y="320" font-size="12" fill="#1A1A1C" font-weight="700">Wohnstudio Aichinger</text>
+    <text x="68" y="333" font-size="10" fill="#666">4060 Leonding · 6 Positionen</text>
+
+    <!-- Stop 4: pending -->
+    <rect x="32" y="348" width="208" height="48" rx="8" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="50" cy="372" r="10" fill="#EEECE7"/>
+    <text x="50" y="376" font-size="11" fill="#8A8A90" text-anchor="middle" font-weight="700">4</text>
+    <text x="68" y="367" font-size="9" fill="#8A8A90" font-weight="600">~ 11:30 · STOPP 4</text>
+    <text x="68" y="384" font-size="12" fill="#1A1A1C" font-weight="700">Bettenfachgeschäft Huber</text>
+
+    <!-- Stop 5: pending -->
+    <rect x="32" y="404" width="208" height="48" rx="8" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="50" cy="428" r="10" fill="#EEECE7"/>
+    <text x="50" y="432" font-size="11" fill="#8A8A90" text-anchor="middle" font-weight="700">5</text>
+    <text x="68" y="423" font-size="9" fill="#8A8A90" font-weight="600">~ 12:45 · STOPP 5</text>
+    <text x="68" y="440" font-size="12" fill="#1A1A1C" font-weight="700">Schlafsysteme Pichler GmbH</text>
+
+    <!-- Stop 6: pending -->
+    <rect x="32" y="460" width="208" height="48" rx="8" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="50" cy="484" r="10" fill="#EEECE7"/>
+    <text x="50" y="488" font-size="11" fill="#8A8A90" text-anchor="middle" font-weight="700">6</text>
+    <text x="68" y="479" font-size="9" fill="#8A8A90" font-weight="600">~ 14:10 · STOPP 6</text>
+    <text x="68" y="496" font-size="12" fill="#1A1A1C" font-weight="700">Möbel Reiter OG</text>
+  </g>
+
+  <!-- RIGHT COLUMN: detail card -->
+  <rect x="248" y="156" width="200" height="352" rx="10" fill="#fff" stroke="#E7E4DE"/>
+
+  <!-- Map placeholder -->
+  <rect x="262" y="170" width="172" height="100" rx="6" fill="#ECEAE5"/>
+  <!-- Stylized roads -->
+  <path d="M262 220 q40 -30 86 -10 q44 18 86 -16" stroke="#C0BCB3" stroke-width="2.5" fill="none"/>
+  <path d="M262 250 q60 18 110 -8 q40 -20 62 8" stroke="#D6D3CC" stroke-width="2" fill="none"/>
+  <!-- Pin -->
+  <path d="M340 215 c0 -8 5 -13 11 -13 c6 0 11 5 11 13 c0 8 -11 19 -11 19 s-11 -11 -11 -19 z" fill="#C8102E"/>
+  <circle cx="351" cy="215" r="4" fill="#fff"/>
+
+  <!-- Detail header -->
+  <text x="262" y="290" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600">STOPP 3 · WOHNSTUDIO AICHINGER</text>
+  <text x="262" y="308" font-family="Inter, Arial, sans-serif" font-size="13" fill="#1A1A1C" font-weight="700">Linzer Str. 142</text>
+  <text x="262" y="324" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">4060 Leonding</text>
+
+  <!-- Detail facts -->
+  <line x1="262" y1="338" x2="434" y2="338" stroke="#E7E4DE"/>
+  <text x="262" y="356" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600">ENTFERNUNG</text>
+  <text x="262" y="372" font-family="Inter, Arial, sans-serif" font-size="13" fill="#1A1A1C" font-weight="700">12,4 km · 18 Min.</text>
+
+  <text x="262" y="392" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600">POSITIONEN</text>
+  <text x="262" y="408" font-family="Inter, Arial, sans-serif" font-size="13" fill="#1A1A1C" font-weight="700">6 Lieferpositionen</text>
+
+  <text x="262" y="428" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600">HINWEIS</text>
+  <text x="262" y="444" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C">Anlieferung über Hofeinfahrt</text>
+  <text x="262" y="458" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C">links, Klingel „Lager".</text>
+
+  <!-- Detail action button -->
+  <rect x="262" y="478" width="172" height="20" rx="5" fill="#ECEAE5"/>
+  <text x="348" y="492" font-family="Inter, Arial, sans-serif" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">Lieferschein öffnen</text>
+
+  <!-- Primary button (bottom span both columns) -->
+  <rect x="32" y="528" width="416" height="56" rx="10" fill="#C8102E"/>
+  <text x="240" y="556" font-family="Inter, Arial, sans-serif" font-size="14" fill="#fff" font-weight="700" text-anchor="middle">Navigation zu Stopp 3 starten</text>
+  <text x="240" y="572" font-family="Inter, Arial, sans-serif" font-size="10" fill="#fff" font-weight="500" text-anchor="middle" opacity="0.85">12,4 km · 18 Minuten</text>
+
+  <!-- Watermark -->
+  <text x="240" y="610" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

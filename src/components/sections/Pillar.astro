@@ -10,18 +10,49 @@ interface Props {
 }
 
 const { entry, variant = "default" } = Astro.props;
-const { eyebrow, title, lede, anchor, situation, features, keyMessage, gallery, galleryLayout = "screens" } = entry.data;
+const {
+  eyebrow,
+  title,
+  lede,
+  anchor,
+  situation,
+  features,
+  keyMessage,
+  notIncluded,
+  architecture,
+  techSpecs,
+  gallery,
+  galleryLayout = "screens",
+} = entry.data;
 
-const galleryClasses =
-  galleryLayout === "phones"
-    ? {
-        grid: "mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3",
-        frame: "mx-auto max-w-[260px] aspect-[9/16]",
-      }
-    : {
-        grid: "mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3",
-        frame: "aspect-[3/2]",
-      };
+const galleryLayouts = {
+  phones: {
+    grid: "mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3",
+    frame: "mx-auto max-w-[260px] aspect-[9/16]",
+  },
+  screens: {
+    grid: "mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3",
+    frame: "aspect-[3/2]",
+  },
+  scanner: {
+    grid: "mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3",
+    frame: "mx-auto max-w-[280px] aspect-[3/5]",
+  },
+  tablet: {
+    grid: "mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3",
+    frame: "mx-auto max-w-[340px] aspect-[3/4]",
+  },
+  laptop: {
+    grid: "mt-6 grid gap-8 md:grid-cols-2 xl:grid-cols-3",
+    frame: "aspect-[16/10]",
+  },
+  label: {
+    grid: "mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3",
+    frame: "mx-auto max-w-[300px] aspect-[3/4]",
+  },
+} as const;
+
+const galleryClasses = galleryLayouts[galleryLayout];
 ---
 
 <Section id={anchor} variant={variant}>
@@ -71,6 +102,71 @@ const galleryClasses =
   </div>
 
   {
+    notIncluded && notIncluded.length > 0 && (
+      <div class="mt-12 rounded-lg border border-line/70 bg-surface-alt p-6">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle">
+          Was die App bewusst nicht macht
+        </p>
+        <ul class="mt-4 grid gap-3 md:grid-cols-2">
+          {notIncluded.map((item) => (
+            <li class="flex gap-3 text-sm leading-relaxed text-ink-muted">
+              <span aria-hidden="true" class="mt-1 inline-block h-px w-4 shrink-0 bg-ink-subtle/60" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  {
+    architecture && (
+      <div class="mt-12">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle">
+          {architecture.title}
+        </p>
+        {architecture.intro && (
+          <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-muted md:text-base">
+            {architecture.intro}
+          </p>
+        )}
+        <ul class="mt-6 grid gap-4 sm:grid-cols-2">
+          {architecture.arguments.map((arg) => (
+            <li>
+              <Card class="h-full">
+                <p class="text-sm font-semibold text-ink">{arg.title}</p>
+                <p class="mt-2 text-sm leading-relaxed text-ink-muted">
+                  {arg.description}
+                </p>
+              </Card>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  {
+    techSpecs && techSpecs.length > 0 && (
+      <div class="mt-12 rounded-xl border border-line/70 bg-surface-alt p-6 shadow-card dark:shadow-card-dark">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle">
+          Technische Eckdaten
+        </p>
+        <dl class="mt-4 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+          {techSpecs.map((spec) => (
+            <div class="border-b border-line/50 pb-3 last:border-b-0 sm:last:[&:nth-last-child(2)]:border-b-0">
+              <dt class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle">
+                {spec.label}
+              </dt>
+              <dd class="mt-1 text-sm leading-relaxed text-ink">{spec.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    )
+  }
+
+  {
     gallery && gallery.length > 0 && (
       <div class="mt-16">
         <div class="flex items-baseline justify-between gap-4">
@@ -83,24 +179,29 @@ const galleryClasses =
         </div>
 
         <ul class={galleryClasses.grid}>
-          {gallery.map((item) => (
-            <li>
-              <figure class="flex h-full flex-col">
-                <div class={`overflow-hidden rounded-xl border border-line/70 bg-surface-alt shadow-card dark:shadow-card-dark ${galleryClasses.frame}`}>
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    loading="lazy"
-                    decoding="async"
-                    class="h-full w-full object-contain"
-                  />
-                </div>
-                <figcaption class="mt-3 text-sm leading-relaxed text-ink-muted">
-                  {item.caption}
-                </figcaption>
-              </figure>
-            </li>
-          ))}
+          {gallery.map((item) => {
+            const frameClass = item.layout
+              ? galleryLayouts[item.layout].frame
+              : galleryClasses.frame;
+            return (
+              <li>
+                <figure class="flex h-full flex-col">
+                  <div class={`overflow-hidden rounded-xl border border-line/70 bg-surface-alt shadow-card dark:shadow-card-dark ${frameClass}`}>
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      loading="lazy"
+                      decoding="async"
+                      class="h-full w-full object-contain"
+                    />
+                  </div>
+                  <figcaption class="mt-3 text-sm leading-relaxed text-ink-muted">
+                    {item.caption}
+                  </figcaption>
+                </figure>
+              </li>
+            );
+          })}
         </ul>
       </div>
     )

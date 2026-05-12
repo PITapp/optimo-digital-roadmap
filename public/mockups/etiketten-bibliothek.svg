@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Muster-Screenshot: Symbol- und Bitmap-Bibliothek auf einem Laptop">
+  <!-- Laptop display bezel -->
+  <rect x="0" y="0" width="800" height="440" rx="8" fill="#1F2023"/>
+  <rect x="20" y="20" width="760" height="400" rx="3" fill="#F7F6F3"/>
+  <circle cx="400" cy="10" r="2" fill="#0B0B0D"/>
+
+  <!-- Laptop base -->
+  <path d="M0 440 L800 440 L760 478 L40 478 Z" fill="#2A2D33"/>
+  <rect x="370" y="448" width="60" height="6" rx="3" fill="#0B0B0D"/>
+  <line x1="0" y1="440" x2="800" y2="440" stroke="#0B0B0D" stroke-width="1"/>
+
+  <!-- ===== Display content ===== -->
+  <!-- Top app bar -->
+  <rect x="20" y="20" width="760" height="44" rx="3" fill="#1A1A1C"/>
+  <circle cx="44" cy="42" r="10" fill="#C8102E"/>
+  <text x="44" y="46" font-family="Inter, Arial, sans-serif" font-size="11" fill="#fff" font-weight="700" text-anchor="middle">P</text>
+  <text x="64" y="46" font-family="Inter, Arial, sans-serif" font-size="13" fill="#fff" font-weight="700">Optimo · Etiketten</text>
+  <text x="220" y="46" font-family="Inter, Arial, sans-serif" font-size="11" fill="#B0AEA8">Editor · Bibliothek · Vorlagen · Druckaufträge</text>
+  <rect x="676" y="32" width="76" height="20" rx="5" fill="#fff" stroke="#1A1A1C" stroke-width="1.2"/>
+  <text x="714" y="46" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" font-weight="700" text-anchor="middle">+ Baustein</text>
+
+  <!-- Page header -->
+  <text x="44" y="88" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600" letter-spacing="1.5">BIBLIOTHEK</text>
+  <text x="44" y="112" font-family="Inter, Arial, sans-serif" font-size="20" fill="#1A1A1C" font-weight="700">Symbole &amp; Bausteine</text>
+
+  <!-- Search bar -->
+  <rect x="44" y="128" width="362" height="32" rx="6" fill="#fff" stroke="#E7E4DE"/>
+  <circle cx="62" cy="144" r="6" fill="none" stroke="#8A8A90" stroke-width="1.4"/>
+  <line x1="66" y1="148" x2="70" y2="152" stroke="#8A8A90" stroke-width="1.4"/>
+  <text x="80" y="148" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90">Symbol oder Hinweistext suchen…</text>
+
+  <text x="424" y="148" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">238 Bausteine</text>
+  <text x="500" y="148" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">·</text>
+  <text x="512" y="148" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">12 Gruppen</text>
+  <text x="580" y="148" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">·</text>
+  <text x="592" y="148" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">letzte Änderung 09.05.</text>
+
+  <!-- ============ LEFT: category list ============ -->
+  <rect x="44" y="172" width="160" height="238" rx="6" fill="#fff" stroke="#E7E4DE"/>
+  <text x="60" y="192" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.5">KATEGORIEN</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="52" y="202" width="144" height="26" rx="4" fill="#FCEAED"/>
+    <text x="68" y="218" font-size="11" fill="#C8102E" font-weight="700">Logos &amp; Marken</text>
+    <text x="184" y="218" font-size="10" fill="#C8102E" font-weight="600" text-anchor="end">14</text>
+
+    <text x="68" y="246" font-size="11" fill="#1A1A1C">Recycling</text>
+    <text x="184" y="246" font-size="10" fill="#8A8A90" text-anchor="end">32</text>
+
+    <text x="68" y="268" font-size="11" fill="#1A1A1C">Pflegesymbole</text>
+    <text x="184" y="268" font-size="10" fill="#8A8A90" text-anchor="end">48</text>
+
+    <text x="68" y="290" font-size="11" fill="#1A1A1C">Zertifikate</text>
+    <text x="184" y="290" font-size="10" fill="#8A8A90" text-anchor="end">26</text>
+
+    <text x="68" y="312" font-size="11" fill="#1A1A1C">Materialhinweise</text>
+    <text x="184" y="312" font-size="10" fill="#8A8A90" text-anchor="end">38</text>
+
+    <text x="68" y="334" font-size="11" fill="#1A1A1C">Härtegrade</text>
+    <text x="184" y="334" font-size="10" fill="#8A8A90" text-anchor="end">18</text>
+
+    <text x="68" y="356" font-size="11" fill="#1A1A1C">Hinweistexte</text>
+    <text x="184" y="356" font-size="10" fill="#8A8A90" text-anchor="end">42</text>
+
+    <text x="68" y="378" font-size="11" fill="#1A1A1C">Sondersymbole</text>
+    <text x="184" y="378" font-size="10" fill="#8A8A90" text-anchor="end">20</text>
+  </g>
+
+  <!-- ============ RIGHT: symbol grid ============ -->
+  <text x="220" y="186" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" font-weight="700">Logos &amp; Marken</text>
+  <text x="296" y="186" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90">14 Bausteine</text>
+
+  <!-- Grid of cards -->
+  <g font-family="Inter, Arial, sans-serif">
+    <!-- Card 1: Optimo logo -->
+    <rect x="220" y="200" width="92" height="100" rx="6" fill="#fff" stroke="#C8102E" stroke-width="1.5"/>
+    <rect x="232" y="212" width="68" height="36" rx="3" fill="#C8102E"/>
+    <text x="266" y="234" font-size="11" fill="#fff" font-weight="800" text-anchor="middle" letter-spacing="2">OPTIMO</text>
+    <text x="266" y="262" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">Optimo Logo</text>
+    <text x="266" y="276" font-size="9" fill="#8A8A90" text-anchor="middle">PNG · 1200 × 480</text>
+    <text x="266" y="290" font-size="9" fill="#2F8F45" font-weight="600" text-anchor="middle">v3 · aktuell</text>
+
+    <!-- Card 2: Optimo NextGen -->
+    <rect x="320" y="200" width="92" height="100" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <rect x="332" y="212" width="68" height="36" rx="3" fill="#1A1A1C"/>
+    <text x="366" y="228" font-size="9" fill="#fff" font-weight="800" text-anchor="middle">OPTIMO</text>
+    <text x="366" y="240" font-size="8" fill="#C8102E" font-weight="700" text-anchor="middle">NEXTGEN</text>
+    <text x="366" y="262" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">NextGen Serie</text>
+    <text x="366" y="276" font-size="9" fill="#8A8A90" text-anchor="middle">PNG · 1200 × 480</text>
+    <text x="366" y="290" font-size="9" fill="#2F8F45" font-weight="600" text-anchor="middle">v2 · aktuell</text>
+
+    <!-- Card 3: Made in Austria -->
+    <rect x="420" y="200" width="92" height="100" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <rect x="450" y="212" width="32" height="36" rx="3" fill="#fff" stroke="#1A1A1C" stroke-width="1"/>
+    <rect x="450" y="212" width="32" height="10" fill="#C8102E"/>
+    <rect x="450" y="238" width="32" height="10" fill="#C8102E"/>
+    <text x="466" y="262" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">Made in AT</text>
+    <text x="466" y="276" font-size="9" fill="#8A8A90" text-anchor="middle">PNG · 400 × 400</text>
+    <text x="466" y="290" font-size="9" fill="#2F8F45" font-weight="600" text-anchor="middle">v1 · aktuell</text>
+
+    <!-- Card 4: Quality seal -->
+    <rect x="520" y="200" width="92" height="100" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="566" cy="230" r="18" fill="none" stroke="#1A1A1C" stroke-width="2"/>
+    <text x="566" y="234" font-size="9" fill="#1A1A1C" font-weight="800" text-anchor="middle">QUALITÄT</text>
+    <text x="566" y="262" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">Qualitätssiegel</text>
+    <text x="566" y="276" font-size="9" fill="#8A8A90" text-anchor="middle">PNG · 600 × 600</text>
+    <text x="566" y="290" font-size="9" fill="#F2B400" font-weight="600" text-anchor="middle">v4 · in Prüfung</text>
+
+    <!-- Card 5: 25 Jahre -->
+    <rect x="620" y="200" width="142" height="100" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <rect x="634" y="212" width="118" height="36" rx="3" fill="#F2B400" opacity="0.2"/>
+    <text x="693" y="228" font-size="14" fill="#1A1A1C" font-weight="800" text-anchor="middle">25</text>
+    <text x="693" y="240" font-size="8" fill="#1A1A1C" font-weight="700" text-anchor="middle">JAHRE OPTIMO</text>
+    <text x="693" y="262" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">Jubiläum 2026</text>
+    <text x="693" y="276" font-size="9" fill="#8A8A90" text-anchor="middle">PNG · 1800 × 480</text>
+    <text x="693" y="290" font-size="9" fill="#C8102E" font-weight="600" text-anchor="middle">v1 · neu</text>
+
+    <!-- Row 2 -->
+    <rect x="220" y="308" width="92" height="100" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <text x="266" y="338" font-size="22" fill="#1A1A1C" font-weight="800" text-anchor="middle">★</text>
+    <text x="266" y="370" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">Premium-Marker</text>
+    <text x="266" y="384" font-size="9" fill="#8A8A90" text-anchor="middle">PNG · 400 × 400</text>
+    <text x="266" y="398" font-size="9" fill="#2F8F45" font-weight="600" text-anchor="middle">v1 · aktuell</text>
+
+    <rect x="320" y="308" width="92" height="100" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <text x="366" y="340" font-size="11" fill="#1A1A1C" font-weight="800" text-anchor="middle">100%</text>
+    <text x="366" y="354" font-size="8" fill="#1A1A1C" font-weight="700" text-anchor="middle">BAUMWOLLE</text>
+    <text x="366" y="370" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">Materialhinweis</text>
+    <text x="366" y="384" font-size="9" fill="#8A8A90" text-anchor="middle">PNG · 400 × 400</text>
+    <text x="366" y="398" font-size="9" fill="#2F8F45" font-weight="600" text-anchor="middle">v2 · aktuell</text>
+
+    <rect x="420" y="308" width="92" height="100" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <rect x="450" y="320" width="32" height="36" rx="3" fill="#ECEAE5"/>
+    <text x="466" y="342" font-size="10" fill="#8A8A90" font-weight="700" text-anchor="middle">+</text>
+    <text x="466" y="370" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">Bio-Siegel</text>
+    <text x="466" y="384" font-size="9" fill="#8A8A90" text-anchor="middle">PNG · 600 × 600</text>
+    <text x="466" y="398" font-size="9" fill="#8A8A90" font-weight="600" text-anchor="middle">v3 · archiviert</text>
+
+    <rect x="520" y="308" width="92" height="100" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <circle cx="566" cy="338" r="14" fill="none" stroke="#1A1A1C" stroke-width="1.6"/>
+    <text x="566" y="342" font-size="11" fill="#1A1A1C" font-weight="700" text-anchor="middle">CE</text>
+    <text x="566" y="370" font-size="10" fill="#1A1A1C" font-weight="700" text-anchor="middle">CE-Kennzeichnung</text>
+    <text x="566" y="384" font-size="9" fill="#8A8A90" text-anchor="middle">PNG · 400 × 400</text>
+    <text x="566" y="398" font-size="9" fill="#2F8F45" font-weight="600" text-anchor="middle">v1 · aktuell</text>
+
+    <rect x="620" y="308" width="142" height="100" rx="6" fill="#fff" stroke="#E7E4DE" stroke-dasharray="4 3"/>
+    <text x="691" y="340" font-size="22" fill="#C0BCB3" font-weight="700" text-anchor="middle">+</text>
+    <text x="691" y="370" font-size="11" fill="#8A8A90" font-weight="700" text-anchor="middle">Neuen Baustein</text>
+    <text x="691" y="386" font-size="9" fill="#8A8A90" text-anchor="middle">hinzufügen</text>
+  </g>
+
+  <!-- Watermark -->
+  <text x="400" y="492" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

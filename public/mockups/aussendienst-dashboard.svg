@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Muster-Screenshot: Aussendienst-Dashboard auf einem Laptop">
+  <!-- Laptop display bezel -->
+  <rect x="0" y="0" width="800" height="440" rx="8" fill="#1F2023"/>
+  <rect x="20" y="20" width="760" height="400" rx="3" fill="#F7F6F3"/>
+  <!-- Camera dot in bezel -->
+  <circle cx="400" cy="10" r="2" fill="#0B0B0D"/>
+
+  <!-- Laptop base / hinge (trapezoid) -->
+  <path d="M0 440 L800 440 L760 478 L40 478 Z" fill="#2A2D33"/>
+  <!-- Trackpad cutout indicator -->
+  <rect x="370" y="448" width="60" height="6" rx="3" fill="#0B0B0D"/>
+  <!-- Hinge highlight -->
+  <line x1="0" y1="440" x2="800" y2="440" stroke="#0B0B0D" stroke-width="1"/>
+
+  <!-- ===== Display content ===== -->
+  <!-- Top app bar -->
+  <rect x="20" y="20" width="760" height="44" rx="3" fill="#1A1A1C"/>
+  <circle cx="44" cy="42" r="10" fill="#C8102E"/>
+  <text x="44" y="46" font-family="Inter, Arial, sans-serif" font-size="11" fill="#fff" font-weight="700" text-anchor="middle">P</text>
+  <text x="64" y="46" font-family="Inter, Arial, sans-serif" font-size="13" fill="#fff" font-weight="700">Optimo · Außendienst</text>
+  <text x="220" y="46" font-family="Inter, Arial, sans-serif" font-size="11" fill="#B0AEA8">Dashboard · Termine · Kunden · Angebote · Berichte</text>
+  <circle cx="730" cy="42" r="6" fill="#2F8F45"/>
+  <text x="744" y="46" font-family="Inter, Arial, sans-serif" font-size="11" fill="#B0AEA8">Online</text>
+
+  <!-- Greeting header -->
+  <text x="44" y="98" font-family="Inter, Arial, sans-serif" font-size="11" fill="#8A8A90" font-weight="600" letter-spacing="1.5">DIENSTAG, 12. MAI 2026</text>
+  <text x="44" y="124" font-family="Inter, Arial, sans-serif" font-size="22" fill="#1A1A1C" font-weight="700">Guten Morgen, T. Berger</text>
+
+  <!-- KPI strip -->
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="44" y="148" width="172" height="76" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <text x="60" y="168" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.2">UMSATZ MAI</text>
+    <text x="60" y="196" font-size="22" fill="#1A1A1C" font-weight="700">€ 84.320</text>
+    <text x="60" y="214" font-size="11" fill="#2F8F45" font-weight="600">▲ 12 % zum Vormonat</text>
+
+    <rect x="226" y="148" width="172" height="76" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <text x="242" y="168" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.2">OFFENE ANGEBOTE</text>
+    <text x="242" y="196" font-size="22" fill="#1A1A1C" font-weight="700">7</text>
+    <text x="298" y="196" font-size="12" fill="#8A8A90">€ 26.900</text>
+    <text x="242" y="214" font-size="11" fill="#666">2 in Verhandlung</text>
+
+    <rect x="408" y="148" width="172" height="76" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <text x="424" y="168" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.2">TERMINE HEUTE</text>
+    <text x="424" y="196" font-size="22" fill="#1A1A1C" font-weight="700">4</text>
+    <text x="448" y="196" font-size="12" fill="#8A8A90">/ 6 in Woche</text>
+    <text x="424" y="214" font-size="11" fill="#666">2 Neukunden</text>
+
+    <rect x="590" y="148" width="172" height="76" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <text x="606" y="168" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.2">SYNC-STATUS</text>
+    <text x="606" y="196" font-size="22" fill="#1A1A1C" font-weight="700">Aktuell</text>
+    <text x="606" y="214" font-size="11" fill="#2F8F45" font-weight="600">● Mit BC synchron</text>
+  </g>
+
+  <!-- Section labels -->
+  <text x="44" y="252" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.5">TERMINE HEUTE</text>
+  <text x="408" y="252" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.5">UMSATZ NACH KUNDEN · LETZTE 6 MONATE</text>
+
+  <!-- LEFT: termine list -->
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="44" y="264" width="354" height="46" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <text x="60" y="282" font-size="10" fill="#C8102E" font-weight="700">09:30 · BESUCH</text>
+    <text x="60" y="298" font-size="13" fill="#1A1A1C" font-weight="700">Möbelhaus Steiner GmbH</text>
+    <text x="220" y="298" font-size="11" fill="#666">4020 Linz · Jahresgespräch</text>
+
+    <rect x="44" y="318" width="354" height="46" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <text x="60" y="336" font-size="10" fill="#8A8A90" font-weight="700">11:00 · BESUCH</text>
+    <text x="60" y="352" font-size="13" fill="#1A1A1C" font-weight="700">Schlafwelt Wieser KG</text>
+    <text x="208" y="352" font-size="11" fill="#666">4040 Linz · Sortimentsvorstellung</text>
+
+    <rect x="44" y="372" width="354" height="46" rx="6" fill="#fff" stroke="#E7E4DE"/>
+    <text x="60" y="390" font-size="10" fill="#8A8A90" font-weight="700">14:30 · NEUKUNDE</text>
+    <text x="60" y="406" font-size="13" fill="#1A1A1C" font-weight="700">Wohnstudio Aichinger</text>
+    <text x="216" y="406" font-size="11" fill="#666">4060 Leonding · Erstbesuch</text>
+  </g>
+
+  <!-- RIGHT: chart placeholder -->
+  <rect x="408" y="264" width="354" height="154" rx="6" fill="#fff" stroke="#E7E4DE"/>
+  <!-- Chart axis -->
+  <line x1="436" y1="392" x2="744" y2="392" stroke="#E7E4DE"/>
+  <!-- Bars -->
+  <g>
+    <rect x="448" y="346" width="32" height="46" fill="#ECEAE5"/>
+    <rect x="492" y="332" width="32" height="60" fill="#ECEAE5"/>
+    <rect x="536" y="310" width="32" height="82" fill="#ECEAE5"/>
+    <rect x="580" y="320" width="32" height="72" fill="#C8102E" opacity="0.35"/>
+    <rect x="624" y="296" width="32" height="96" fill="#C8102E" opacity="0.6"/>
+    <rect x="668" y="282" width="32" height="110" fill="#C8102E"/>
+  </g>
+  <!-- Trend line -->
+  <path d="M464 358 q40 -12 60 -16 q22 -4 44 -24 q22 -20 44 -8 q22 12 44 -22 q22 -34 44 -22"
+        stroke="#1A1A1C" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Bar labels -->
+  <g font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90">
+    <text x="464" y="406" text-anchor="middle">Dez</text>
+    <text x="508" y="406" text-anchor="middle">Jan</text>
+    <text x="552" y="406" text-anchor="middle">Feb</text>
+    <text x="596" y="406" text-anchor="middle">Mär</text>
+    <text x="640" y="406" text-anchor="middle">Apr</text>
+    <text x="684" y="406" text-anchor="middle">Mai</text>
+  </g>
+  <!-- Legend -->
+  <circle cx="430" cy="284" r="4" fill="#C8102E"/>
+  <text x="442" y="288" font-family="Inter, Arial, sans-serif" font-size="10" fill="#666">Steiner GmbH</text>
+  <circle cx="540" cy="284" r="4" fill="#ECEAE5" stroke="#C0BCB3"/>
+  <text x="552" y="288" font-family="Inter, Arial, sans-serif" font-size="10" fill="#666">übrige Kunden</text>
+
+  <!-- Watermark -->
+  <text x="400" y="492" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

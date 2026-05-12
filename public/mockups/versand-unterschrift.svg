@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" role="img" aria-label="Muster-Screenshot: Unterschrift mit Zeitstempel und Geolokation der Versand-App auf einem Tablet">
+  <!-- Tablet frame -->
+  <rect x="0" y="0" width="480" height="640" rx="24" fill="#1F2023"/>
+  <rect x="14" y="14" width="452" height="612" rx="14" fill="#F7F6F3"/>
+  <circle cx="240" cy="26" r="3" fill="#0B0B0D"/>
+
+  <!-- App header -->
+  <rect x="32" y="48" width="416" height="68" rx="10" fill="#ECEAE5"/>
+  <text x="48" y="71" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="600">LS-2026-4187 · UNTERSCHRIFT</text>
+  <text x="48" y="92" font-family="Inter, Arial, sans-serif" font-size="16" fill="#1A1A1C" font-weight="700">Quittung des Kunden</text>
+  <text x="48" y="108" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">Wohnstudio Aichinger · Hr. Mayrhofer</text>
+
+  <!-- Section labels -->
+  <text x="32" y="138" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.5">ZUSAMMENFASSUNG</text>
+  <text x="248" y="138" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.5">UNTERSCHRIFT</text>
+
+  <!-- LEFT COLUMN: summary -->
+  <rect x="32" y="148" width="200" height="156" rx="8" fill="#fff" stroke="#E7E4DE"/>
+  <text x="48" y="170" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.2">LIEFERINHALT</text>
+  <text x="48" y="190" font-family="Inter, Arial, sans-serif" font-size="12" fill="#1A1A1C">4 Positionen</text>
+  <text x="48" y="206" font-family="Inter, Arial, sans-serif" font-size="12" fill="#1A1A1C">19 von 20 Stück</text>
+  <line x1="48" y1="220" x2="216" y2="220" stroke="#E7E4DE"/>
+  <text x="48" y="240" font-family="Inter, Arial, sans-serif" font-size="11" fill="#C8102E" font-weight="600">1 Abweichung erfasst</text>
+  <text x="48" y="258" font-family="Inter, Arial, sans-serif" font-size="11" fill="#2F8F45" font-weight="600">2 Fotos angehängt</text>
+  <text x="48" y="276" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">1 Kommentar an Zentrale</text>
+  <text x="48" y="294" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">1 Tauschpalette mitgenommen</text>
+
+  <!-- Meta box: timestamp + geolocation -->
+  <rect x="32" y="318" width="200" height="186" rx="8" fill="#ECEAE5"/>
+  <!-- Clock icon -->
+  <circle cx="52" cy="346" r="9" fill="none" stroke="#1A1A1C" stroke-width="1.6"/>
+  <path d="M52 340 v6 l4 3" stroke="#1A1A1C" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+  <text x="70" y="342" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600">ZEITSTEMPEL</text>
+  <text x="70" y="358" font-family="Inter, Arial, sans-serif" font-size="12" fill="#1A1A1C" font-weight="700">11. Mai 2026</text>
+  <text x="70" y="372" font-family="Inter, Arial, sans-serif" font-size="12" fill="#1A1A1C" font-weight="700">10:34 Uhr</text>
+
+  <!-- Pin icon -->
+  <path d="M50 400 c0 -7 4 -11 9 -11 c5 0 9 4 9 11 c0 7 -9 16 -9 16 s-9 -9 -9 -16 z" fill="none" stroke="#1A1A1C" stroke-width="1.6"/>
+  <circle cx="59" cy="400" r="3" fill="#1A1A1C"/>
+  <text x="80" y="402" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600">GEOLOKATION</text>
+  <text x="80" y="418" font-family="Inter, Arial, sans-serif" font-size="12" fill="#1A1A1C" font-weight="700">48.2696° N</text>
+  <text x="80" y="432" font-family="Inter, Arial, sans-serif" font-size="12" fill="#1A1A1C" font-weight="700">14.2522° O</text>
+
+  <!-- Synced indicator -->
+  <line x1="48" y1="450" x2="216" y2="450" stroke="#D6D3CC"/>
+  <circle cx="52" cy="476" r="6" fill="#2F8F45"/>
+  <text x="68" y="472" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600">SYNC-STATUS</text>
+  <text x="68" y="488" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" font-weight="600">Bereit zum Senden</text>
+
+  <!-- RIGHT COLUMN: signature pad -->
+  <rect x="248" y="148" width="200" height="356" rx="8" fill="#fff" stroke="#E7E4DE"/>
+  <text x="264" y="170" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.2">UNTERSCHRIFT KUNDE</text>
+  <text x="264" y="186" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C">Hr. Mayrhofer</text>
+
+  <!-- Signature line -->
+  <line x1="264" y1="460" x2="432" y2="460" stroke="#E7E4DE" stroke-dasharray="3 3"/>
+  <text x="264" y="478" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8">Bitte hier unterschreiben</text>
+
+  <!-- Stylized signature stroke (centered in pad) -->
+  <path d="M276 410 q12 -34 30 -16 q14 16 4 32 q-10 18 8 18 q22 0 32 -24 q12 -22 32 -10 q22 12 14 30 q-8 18 18 8 q22 -10 38 -28"
+        transform="translate(-12,0)"
+        stroke="#1A1A1C" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Reset signature button -->
+  <rect x="264" y="486" width="120" height="10" rx="0" fill="none"/>
+  <text x="264" y="494" font-family="Inter, Arial, sans-serif" font-size="10" fill="#C8102E" font-weight="600" text-decoration="underline">Unterschrift zurücksetzen</text>
+
+  <!-- Primary button (full width) -->
+  <rect x="32" y="528" width="416" height="56" rx="10" fill="#C8102E"/>
+  <text x="240" y="556" font-family="Inter, Arial, sans-serif" font-size="14" fill="#fff" font-weight="700" text-anchor="middle">Lieferung abschließen</text>
+  <text x="240" y="572" font-family="Inter, Arial, sans-serif" font-size="10" fill="#fff" font-weight="500" text-anchor="middle" opacity="0.85">An Business Central und Versandsystem senden</text>
+
+  <!-- Watermark -->
+  <text x="240" y="610" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

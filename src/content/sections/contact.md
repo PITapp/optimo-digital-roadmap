@@ -1,7 +1,7 @@
 ---
 eyebrow: "Ihre Ansprechpartner"
 title: "Sprechen wir über den nächsten Schritt."
-lede: "PITapp begleitet Sie durch alle drei Säulen — aus einer Hand, mit einem festen Ansprechpartner."
+lede: "PITapp begleitet Sie durch alle fünf Säulen — aus einer Hand, mit einem festen Ansprechpartner."
 ---
 
 <!-- TODO: Kontaktdaten (BRIEFING Kapitel 8, offener Punkt):

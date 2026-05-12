@@ -13,21 +13,35 @@ const steps = [
     title: "Fundament",
     pillar: "Business-Central-Migration",
     description:
-      "Die neue BC-Version als technisches Rückgrat. Moderne Schnittstellen, längere Wartungszusage, bessere Oberfläche.",
+      "Die neue BC-Version als technisches Rückgrat. Moderne Schnittstellen, längere Wartungszusage, bessere Oberfläche — Voraussetzung für die vier Apps.",
   },
   {
     step: "02",
-    title: "Täglicher Betrieb",
+    title: "Lager",
     pillar: "Scanner-App",
     description:
-      "Logistik und Lager arbeiten auf der neuen BC-Version mit einer modernen Web-App statt proprietärem Scanner-Client.",
+      "Inventur, Umlagerungen, Artikelinformationen und die LKW-Beladung im Versand — als moderne Web-App statt proprietärem Scanner-Client.",
   },
   {
     step: "03",
     title: "Kundenfront",
-    pillar: "Außendienst-Modul in BC",
+    pillar: "Außendienst-App",
     description:
-      "Der Außendienst arbeitet im eigenen Cockpit der neuen BC-Version — im Browser auf dem Laptop, über die bestehende VPN-Verbindung.",
+      "Eigenständige PITapp-App auf Laptop oder Tablet, offline-fähig, mit BC-Anbindung — konsequent auf den Verkauf zugeschnitten.",
+  },
+  {
+    step: "04",
+    title: "Auslieferung",
+    pillar: "Versand- & Auslieferungs-App",
+    description:
+      "Die digitale Brücke zwischen Fahrer und Zentrale: Tourenbegleiter, Liefernachweis und Kommunikation in einer offline-fähigen App.",
+  },
+  {
+    step: "05",
+    title: "Markenauftritt",
+    pillar: "Etiketten- & Markenkennzeichnungs-App",
+    description:
+      "Pflicht-Ersatz für das Etikettentool aus Navision 5 — kann parallel zur BC-Migration laufen. Parametergesteuerte Produktetiketten für Matratzen und Lattenroste.",
   },
 ];
 ---
@@ -39,7 +53,7 @@ const steps = [
     <Content />
   </div>
 
-  <ol class="mt-14 grid gap-6 md:grid-cols-3">
+  <ol class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
     {
       steps.map((item, idx) => (
         <li class="relative rounded-xl border border-line/70 bg-surface-alt p-6 shadow-card dark:shadow-card-dark">

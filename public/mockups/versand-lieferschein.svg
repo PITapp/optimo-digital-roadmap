@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" role="img" aria-label="Muster-Screenshot: Lieferschein mit Mengenbestaetigung der Versand-App auf einem Tablet">
+  <!-- Tablet frame -->
+  <rect x="0" y="0" width="480" height="640" rx="24" fill="#1F2023"/>
+  <rect x="14" y="14" width="452" height="612" rx="14" fill="#F7F6F3"/>
+  <circle cx="240" cy="26" r="3" fill="#0B0B0D"/>
+
+  <!-- App header -->
+  <rect x="32" y="48" width="416" height="68" rx="10" fill="#ECEAE5"/>
+  <text x="48" y="71" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="600">LIEFERSCHEIN LS-2026-4187 · STOPP 3</text>
+  <text x="48" y="92" font-family="Inter, Arial, sans-serif" font-size="16" fill="#1A1A1C" font-weight="700">Wohnstudio Aichinger</text>
+  <text x="48" y="108" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">4060 Leonding · Linzer Str. 142</text>
+
+  <!-- Section labels -->
+  <text x="32" y="138" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.5">POSITIONEN</text>
+  <text x="288" y="138" font-family="Inter, Arial, sans-serif" font-size="10" fill="#8A8A90" font-weight="700" letter-spacing="1.5">DETAILS &amp; NACHWEIS</text>
+
+  <!-- LEFT COLUMN: positions -->
+  <g font-family="Inter, Arial, sans-serif">
+    <!-- Position 1: confirmed -->
+    <rect x="32" y="148" width="240" height="58" rx="8" fill="#fff" stroke="#E7E4DE"/>
+    <text x="48" y="168" font-size="9" fill="#8A8A90" font-weight="600">ART-4502 · Matratzenkern</text>
+    <text x="48" y="186" font-size="13" fill="#1A1A1C" font-weight="700">120 × 200 Comfort</text>
+    <text x="48" y="200" font-size="10" fill="#666">Soll: 8 · Ist: 8</text>
+    <circle cx="252" cy="180" r="11" fill="#E8F2E9"/>
+    <path d="M247 180 l3 3 l7 -7" stroke="#2F8F45" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+    <!-- Position 2: deviation -->
+    <rect x="32" y="214" width="240" height="58" rx="8" fill="#fff" stroke="#C8102E" stroke-width="1.5"/>
+    <text x="48" y="234" font-size="9" fill="#8A8A90" font-weight="600">ART-4518 · Matratzenkern</text>
+    <text x="48" y="252" font-size="13" fill="#1A1A1C" font-weight="700">140 × 200 Premium</text>
+    <text x="48" y="266" font-size="10" fill="#C8102E" font-weight="600">Soll: 4 · Ist: 3 · Abweichung erfasst</text>
+    <circle cx="252" cy="246" r="11" fill="#FCEAED"/>
+    <text x="252" y="251" font-size="13" fill="#C8102E" text-anchor="middle" font-weight="700">!</text>
+
+    <!-- Position 3: confirmed -->
+    <rect x="32" y="280" width="240" height="58" rx="8" fill="#fff" stroke="#E7E4DE"/>
+    <text x="48" y="300" font-size="9" fill="#8A8A90" font-weight="600">ART-4730 · Lattenrost</text>
+    <text x="48" y="318" font-size="13" fill="#1A1A1C" font-weight="700">90 × 200 Basic</text>
+    <text x="48" y="332" font-size="10" fill="#666">Soll: 6 · Ist: 6</text>
+    <circle cx="252" cy="312" r="11" fill="#E8F2E9"/>
+    <path d="M247 312 l3 3 l7 -7" stroke="#2F8F45" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+    <!-- Position 4: open -->
+    <rect x="32" y="346" width="240" height="58" rx="8" fill="#fff" stroke="#E7E4DE"/>
+    <text x="48" y="366" font-size="9" fill="#8A8A90" font-weight="600">ART-4801 · Bettrahmen</text>
+    <text x="48" y="384" font-size="13" fill="#1A1A1C" font-weight="700">140 × 200 Eiche</text>
+    <text x="48" y="398" font-size="10" fill="#666">Soll: 2 · noch zu bestätigen</text>
+    <circle cx="252" cy="378" r="11" fill="#EEECE7"/>
+    <circle cx="252" cy="378" r="4" fill="#8A8A90"/>
+  </g>
+
+  <!-- RIGHT COLUMN: details / proof -->
+  <!-- Sonderhinweis card -->
+  <rect x="288" y="148" width="160" height="76" rx="8" fill="#FFF8E6" stroke="#E8D88A"/>
+  <text x="304" y="168" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A6F1A" font-weight="700" letter-spacing="1.2">SONDERHINWEIS</text>
+  <text x="304" y="186" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C">Anlieferung über Hofein-</text>
+  <text x="304" y="200" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C">fahrt links,</text>
+  <text x="304" y="214" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C">Klingel „Lager".</text>
+
+  <!-- Photo placeholder -->
+  <rect x="288" y="232" width="160" height="100" rx="8" fill="#ECEAE5" stroke="#E7E4DE"/>
+  <!-- Stylized photo content -->
+  <path d="M298 322 l30 -34 l24 22 l28 -32 l30 38 l28 6" stroke="#C0BCB3" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <circle cx="408" cy="252" r="8" fill="#D6D3CC"/>
+  <text x="368" y="328" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="600" text-anchor="end">FOTO 1 · ABSTELLNACHWEIS</text>
+
+  <!-- Action row: foto / kommentar -->
+  <rect x="288" y="342" width="160" height="36" rx="8" fill="#fff" stroke="#E7E4DE"/>
+  <circle cx="306" cy="360" r="8" fill="none" stroke="#1A1A1C" stroke-width="1.5"/>
+  <circle cx="306" cy="360" r="3" fill="#1A1A1C"/>
+  <text x="320" y="364" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" font-weight="600">Weiteres Foto</text>
+
+  <rect x="288" y="386" width="160" height="36" rx="8" fill="#fff" stroke="#E7E4DE"/>
+  <rect x="300" y="350" width="0" height="0"/>
+  <rect x="300" y="402" width="22" height="16" rx="3" fill="none" stroke="#1A1A1C" stroke-width="1.5"/>
+  <path d="M304 408 h14 M304 412 h10" stroke="#1A1A1C" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="332" y="408" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C" font-weight="600">Kommentar</text>
+
+  <!-- Status summary -->
+  <rect x="288" y="432" width="160" height="76" rx="8" fill="#fff" stroke="#E7E4DE"/>
+  <text x="304" y="452" font-family="Inter, Arial, sans-serif" font-size="9" fill="#8A8A90" font-weight="700" letter-spacing="1.2">STATUS</text>
+  <text x="304" y="472" font-family="Inter, Arial, sans-serif" font-size="11" fill="#1A1A1C">3 von 4 bestätigt</text>
+  <text x="304" y="488" font-family="Inter, Arial, sans-serif" font-size="11" fill="#C8102E" font-weight="600">1 Abweichung</text>
+  <text x="304" y="502" font-family="Inter, Arial, sans-serif" font-size="11" fill="#2F8F45" font-weight="600">1 Foto angehängt</text>
+
+  <!-- Primary button (full width) -->
+  <rect x="32" y="528" width="416" height="56" rx="10" fill="#C8102E"/>
+  <text x="240" y="556" font-family="Inter, Arial, sans-serif" font-size="14" fill="#fff" font-weight="700" text-anchor="middle">Weiter zur Unterschrift</text>
+  <text x="240" y="572" font-family="Inter, Arial, sans-serif" font-size="10" fill="#fff" font-weight="500" text-anchor="middle" opacity="0.85">Letzte Position bestätigen, dann Quittung</text>
+
+  <!-- Watermark -->
+  <text x="240" y="610" font-family="Inter, Arial, sans-serif" font-size="9" fill="#B0AEA8" text-anchor="middle" letter-spacing="2">MUSTER · VORSCHAU</text>
+</svg>

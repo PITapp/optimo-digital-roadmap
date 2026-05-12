@@ -1,9 +1,9 @@
 ---
-order: 3
+order: 1
 anchor: "bc-migration"
-eyebrow: "Säule 3"
+eyebrow: "Säule 1"
 title: "Migration Business Central — auf die aktuelle Version, on-prem"
-lede: "Das technische Fundament, auf dem die Scanner-App und das Außendienst-Modul aufbauen. Migration von Version 14 auf die neueste Business-Central-Version, ausdrücklich on-prem."
+lede: "Das technische Fundament, auf dem die vier nachfolgenden Apps aufbauen. Migration von Version 14 auf die neueste Business-Central-Version, ausdrücklich on-prem."
 situation: "Optimo läuft derzeit auf Business Central Version 14 — einer Version, deren Mainstream-Support durch Microsoft bereits im Oktober 2023 ausgelaufen ist. Eine Migration auf die aktuelle Version ist damit nicht nur fachlich, sondern auch sicherheits- und supporttechnisch überfällig. Die Migration erfolgt explizit on-prem, also nicht in die Cloud-Variante, sondern auf moderne Server in der vorhandenen Infrastruktur — die Datenhoheit bleibt vollständig bei Optimo."
 features:
   - title: "Modernes Web-Client statt Windows-Client"
@@ -15,10 +15,12 @@ features:
   - title: "Eingebettete Power-BI-Dashboards"
     description: "Standard-Reports für Finanzen, Vertrieb und Lager direkt im BC-Rollencenter, ohne Custom-Entwicklung. Geschäftsführung und Bereichsleitung sehen aktuelle Zahlen ohne Excel-Export."
   - title: "Offene Schnittstellen (REST/OData-APIs)"
-    description: "Standardisierte, dokumentierte Schnittstellen sind das technische Fundament für die Scanner-App aus Säule 1 und das Außendienst-Cockpit aus Säule 2. In Version 14 nur sehr eingeschränkt vorhanden."
+    description: "Standardisierte, dokumentierte Schnittstellen sind das technische Fundament für die Scanner-App, die Außendienst-App, die Versand-App und die Etiketten-App. In Version 14 nur sehr eingeschränkt vorhanden."
   - title: "Sieben Jahre Funktions-Plus seit Version 14"
     description: "Microsoft hat in jedem Halbjahres-Release Funktionen ergänzt: strukturierte E-Rechnung für gesetzliche Vorgaben, bessere Lager- und Kommissionier-Workflows, modernisiertes Buchhaltungs-Reporting, leistungsfähigere Workflow-Engine."
-keyMessage: "Das Fundament des Gesamtpakets — drittens im Präsentationsfluss, aber das technische Rückgrat der Modernisierung. On-prem bewahrt die volle Datenhoheit und schließt zugleich an die aktive Microsoft-Roadmap an, statt auf einer auslaufenden Version stehenzubleiben."
+  - title: "Wegfallendes Etikettentool aus Navision 5"
+    description: "Die in Navision 5 entwickelte Eigenlösung für Produktetiketten lässt sich nicht in die aktuelle BC-Version übernehmen. Säule 5 (Etiketten & Markenkennzeichnung) schließt diese Lücke — die beiden Säulen gehören damit zusammen in die Roadmap."
+keyMessage: "Das Fundament des Gesamtpakets — zuerst platziert, weil die vier App-Säulen darauf aufsetzen. On-prem bewahrt die volle Datenhoheit und schließt zugleich an die aktive Microsoft-Roadmap an, statt auf einer auslaufenden Version stehenzubleiben."
 galleryLayout: "screens"
 gallery:
   - src: "/mockups/migration-versionen.svg"
@@ -26,7 +28,7 @@ gallery:
     caption: "Versionssprung — von Version 14 auf die aktuelle Version, ausdrücklich on-prem."
   - src: "/mockups/migration-architektur.svg"
     alt: "Muster-Visualisierung: Zielarchitektur nach der Migration"
-    caption: "Zielarchitektur — BC als Fundament, Scanner-App und Außendienst-Modul bauen darauf auf."
+    caption: "Zielarchitektur — BC als Fundament, Scanner-App, Außendienst-App, Versand-App und Etiketten-App bauen darauf auf."
   - src: "/mockups/migration-vorteile.svg"
     alt: "Muster-Visualisierung: Sechs konkrete Verbesserungen durch die Migration"
     caption: "Was sich ändert — sechs konkrete Verbesserungen, die mit der Migration nutzbar werden."

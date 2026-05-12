@@ -17,13 +17,39 @@ const pillars = defineCollection({
       }),
     ),
     keyMessage: z.string(),
-    galleryLayout: z.enum(["phones", "screens"]).optional(),
+    notIncluded: z.array(z.string()).optional(),
+    architecture: z
+      .object({
+        title: z.string(),
+        intro: z.string().optional(),
+        arguments: z.array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+          }),
+        ),
+      })
+      .optional(),
+    techSpecs: z
+      .array(
+        z.object({
+          label: z.string(),
+          value: z.string(),
+        }),
+      )
+      .optional(),
+    galleryLayout: z
+      .enum(["phones", "screens", "scanner", "tablet", "laptop", "label"])
+      .optional(),
     gallery: z
       .array(
         z.object({
           src: z.string(),
           alt: z.string(),
           caption: z.string(),
+          layout: z
+            .enum(["phones", "screens", "scanner", "tablet", "laptop", "label"])
+            .optional(),
         }),
       )
       .optional(),
