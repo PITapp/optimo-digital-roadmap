@@ -3,10 +3,18 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="border-t border-line/60 bg-surface-muted">
-  <div class="container-content flex flex-col gap-2 py-10 text-sm text-ink-subtle md:flex-row md:items-center md:justify-between">
-    <p>
-      <span class="font-medium text-ink-muted">PITapp</span> — IT-Dienstleister aus Österreich.
-    </p>
+  <div class="container-content flex flex-col gap-4 py-10 text-sm text-ink-subtle md:flex-row md:items-center md:justify-between">
+    <div class="flex flex-col gap-1 md:flex-row md:items-center md:gap-6">
+      <p>
+        <span class="font-medium text-ink-muted">PITapp</span> — IT-Dienstleister aus Österreich.
+      </p>
+      <a
+        href="/technischer-hintergrund/"
+        class="text-ink-subtle transition hover:text-ink"
+      >
+        Technischer Hintergrund
+      </a>
+    </div>
     <p class="md:text-right">
       Optimo Business Central Roadmap · {year} · Vertraulich — nur für interne Verwendung bei Optimo.
       <span class="block text-[11px] text-ink-subtle/80">Zugriffe werden protokolliert.</span>

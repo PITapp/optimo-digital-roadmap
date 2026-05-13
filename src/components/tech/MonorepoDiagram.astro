@@ -1,0 +1,182 @@
+---
+/* Schaubild zu Sektion "Monorepo-Struktur":
+   Oben die vier Apps, unten die sechs gemeinsamen Packages.
+   Eine horizontale Bus-Linie zeigt, dass alle Apps potenziell auf
+   alle Packages zugreifen — ohne 24 einzelne Verbindungslinien. */
+---
+
+<figure class="mt-10">
+  <div class="overflow-x-auto rounded-xl border border-line/70 bg-surface-alt p-6 shadow-card dark:shadow-card-dark">
+    <svg
+      viewBox="0 0 820 380"
+      role="img"
+      aria-labelledby="monorepo-title monorepo-desc"
+      class="mx-auto block h-auto w-full min-w-[680px] max-w-[780px]"
+    >
+      <title id="monorepo-title">Aufbau des Monorepos</title>
+      <desc id="monorepo-desc">
+        Oben die vier Apps Scanner, Außendienst, Auslieferung und Zentrale.
+        Unten die sechs gemeinsamen Bausteine bc-client, auth, messaging,
+        shared-types, ui und utils. Eine horizontale Bus-Linie verbindet
+        beide Reihen.
+      </desc>
+
+      <!-- Sektions-Beschriftungen am Rand -->
+      <text x="20" y="62"
+        fill="rgb(var(--color-ink-subtle))"
+        font-size="10" font-weight="600" letter-spacing="2">APPS</text>
+      <text x="20" y="298"
+        fill="rgb(var(--color-ink-subtle))"
+        font-size="10" font-weight="600" letter-spacing="2">PACKAGES</text>
+
+      <!-- Vier App-Kacheln oben -->
+      <g>
+        <!-- Scanner -->
+        <rect x="100" y="40" width="150" height="70" rx="10"
+          fill="rgb(var(--color-tech) / 0.08)"
+          stroke="rgb(var(--color-tech))" stroke-width="1.5" />
+        <text x="175" y="70" text-anchor="middle"
+          fill="rgb(var(--color-tech))"
+          font-size="10" font-weight="600" letter-spacing="1.5">APP</text>
+        <text x="175" y="92" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="15" font-weight="600">Scanner</text>
+
+        <!-- Außendienst -->
+        <rect x="270" y="40" width="150" height="70" rx="10"
+          fill="rgb(var(--color-tech) / 0.08)"
+          stroke="rgb(var(--color-tech))" stroke-width="1.5" />
+        <text x="345" y="70" text-anchor="middle"
+          fill="rgb(var(--color-tech))"
+          font-size="10" font-weight="600" letter-spacing="1.5">APP</text>
+        <text x="345" y="92" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="15" font-weight="600">Außendienst</text>
+
+        <!-- Auslieferung -->
+        <rect x="440" y="40" width="150" height="70" rx="10"
+          fill="rgb(var(--color-tech) / 0.08)"
+          stroke="rgb(var(--color-tech))" stroke-width="1.5" />
+        <text x="515" y="70" text-anchor="middle"
+          fill="rgb(var(--color-tech))"
+          font-size="10" font-weight="600" letter-spacing="1.5">APP</text>
+        <text x="515" y="92" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="15" font-weight="600">Auslieferung</text>
+
+        <!-- Zentrale -->
+        <rect x="610" y="40" width="150" height="70" rx="10"
+          fill="rgb(var(--color-tech) / 0.08)"
+          stroke="rgb(var(--color-tech))" stroke-width="1.5" />
+        <text x="685" y="70" text-anchor="middle"
+          fill="rgb(var(--color-tech))"
+          font-size="10" font-weight="600" letter-spacing="1.5">APP</text>
+        <text x="685" y="92" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="15" font-weight="600">Zentrale</text>
+      </g>
+
+      <!-- Vertikale Linien von Apps zum Bus -->
+      <g stroke="rgb(var(--color-line))" stroke-width="1.5">
+        <line x1="175" y1="110" x2="175" y2="180" />
+        <line x1="345" y1="110" x2="345" y2="180" />
+        <line x1="515" y1="110" x2="515" y2="180" />
+        <line x1="685" y1="110" x2="685" y2="180" />
+      </g>
+
+      <!-- Bus-Linie -->
+      <g>
+        <line x1="100" y1="180" x2="760" y2="180"
+          stroke="rgb(var(--color-tech-muted))" stroke-width="2" />
+        <text x="430" y="172" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="11">
+          gemeinsame Bausteine werden überall geteilt
+        </text>
+      </g>
+
+      <!-- Vertikale Linien vom Bus zu Packages -->
+      <g stroke="rgb(var(--color-line))" stroke-width="1.5">
+        <line x1="120" y1="180" x2="120" y2="250" />
+        <line x1="230" y1="180" x2="230" y2="250" />
+        <line x1="340" y1="180" x2="340" y2="250" />
+        <line x1="450" y1="180" x2="450" y2="250" />
+        <line x1="565" y1="180" x2="565" y2="250" />
+        <line x1="680" y1="180" x2="680" y2="250" />
+      </g>
+
+      <!-- Sechs Package-Kacheln unten -->
+      <g>
+        <!-- bc-client -->
+        <rect x="65" y="250" width="110" height="60" rx="8"
+          fill="rgb(var(--color-surface))"
+          stroke="rgb(var(--color-line))" />
+        <text x="120" y="277" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="13" font-weight="600">bc-client</text>
+        <text x="120" y="296" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="10">BC-Anbindung</text>
+
+        <!-- auth -->
+        <rect x="180" y="250" width="100" height="60" rx="8"
+          fill="rgb(var(--color-surface))"
+          stroke="rgb(var(--color-line))" />
+        <text x="230" y="277" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="13" font-weight="600">auth</text>
+        <text x="230" y="296" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="10">Anmeldung</text>
+
+        <!-- messaging -->
+        <rect x="285" y="250" width="110" height="60" rx="8"
+          fill="rgb(var(--color-surface))"
+          stroke="rgb(var(--color-line))" />
+        <text x="340" y="277" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="13" font-weight="600">messaging</text>
+        <text x="340" y="296" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="10">Echtzeit-Kanal</text>
+
+        <!-- shared-types -->
+        <rect x="400" y="250" width="110" height="60" rx="8"
+          fill="rgb(var(--color-surface))"
+          stroke="rgb(var(--color-line))" />
+        <text x="455" y="277" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="13" font-weight="600">shared-types</text>
+        <text x="455" y="296" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="10">Datenmodell</text>
+
+        <!-- ui -->
+        <rect x="515" y="250" width="100" height="60" rx="8"
+          fill="rgb(var(--color-surface))"
+          stroke="rgb(var(--color-line))" />
+        <text x="565" y="277" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="13" font-weight="600">ui</text>
+        <text x="565" y="296" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="10">Oberflächen</text>
+
+        <!-- utils -->
+        <rect x="620" y="250" width="120" height="60" rx="8"
+          fill="rgb(var(--color-surface))"
+          stroke="rgb(var(--color-line))" />
+        <text x="680" y="277" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="13" font-weight="600">utils</text>
+        <text x="680" y="296" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="10">Hilfsfunktionen</text>
+      </g>
+
+      <!-- Repository-Klammer am Rand -->
+      <g>
+        <text x="410" y="350" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="11" font-style="italic">
+          ein gemeinsames Repository (Monorepo) — verwaltet mit pnpm Workspaces + Turborepo
+        </text>
+      </g>
+    </svg>
+  </div>
+  <figcaption class="mt-3 text-sm leading-relaxed text-ink-subtle">
+    Schaubild&nbsp;2 — Vier Apps, sechs gemeinsame Bausteine, ein Repository.
+  </figcaption>
+</figure>

@@ -64,6 +64,12 @@
     --color-accent-bold: 0 183 195;     /* #00B7C3 */
     --color-accent-hover: 0 96 105;     /* #006069 */
 
+    /* Tech-Slate — neutral, gedämpfter Akzent für den Bereich
+       "Technischer Hintergrund". Bewusst von brand/accent getrennt,
+       damit der Tech-Bereich visuell zurücktritt. */
+    --color-tech: 71 85 105;            /* #475569 — slate-600 */
+    --color-tech-muted: 100 116 139;    /* #64748B — slate-500 */
+
     color-scheme: light;
   }
 
@@ -85,6 +91,10 @@
     --color-accent: 90 196 204;         /* #5AC4CC */
     --color-accent-bold: 90 196 204;
     --color-accent-hover: 125 213 219;  /* #7DD5DB */
+
+    /* Tech-Slate — leicht aufgehellt für dunkle Flächen. */
+    --color-tech: 148 163 184;          /* #94A3B8 — slate-400 */
+    --color-tech-muted: 100 116 139;    /* #64748B */
 
     color-scheme: dark;
   }

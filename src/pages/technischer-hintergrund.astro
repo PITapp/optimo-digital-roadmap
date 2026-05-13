@@ -1,0 +1,584 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Section from "@components/ui/Section.astro";
+import Card from "@components/ui/Card.astro";
+import TwoWorldsDiagram from "@components/tech/TwoWorldsDiagram.astro";
+import MonorepoDiagram from "@components/tech/MonorepoDiagram.astro";
+import DataFlowDiagram from "@components/tech/DataFlowDiagram.astro";
+
+const toc = [
+  { href: "#tech-zwei-welten", label: "Zwei getrennte Welten" },
+  { href: "#tech-vier-apps", label: "Die vier Apps im Überblick" },
+  { href: "#tech-monorepo", label: "Monorepo-Architektur" },
+  { href: "#tech-bausteine", label: "Die gemeinsamen Bausteine" },
+  { href: "#tech-stack", label: "Tech-Stack" },
+  { href: "#tech-datenfluss", label: "Datenfluss und Zusammenspiel" },
+  { href: "#tech-sicherheit", label: "Sicherheit und Datenschutz" },
+  { href: "#tech-ausblick", label: "Ausblick" },
+];
+
+const apps = [
+  {
+    name: "Scanner",
+    purpose: "Erfassungs- und Abfrage-App für Produktion, Lager, Versand und Inventur.",
+    users: "Lager- und Produktionsmitarbeiter",
+    devices: "Handheld-Geräte (Zebra, Honeywell) und Android-Tablets",
+    note: "PWA — einsatzbereit auch bei kurzen Netzaussetzern im Lager.",
+  },
+  {
+    name: "Außendienst",
+    purpose: "Informationssystem für den Außendienst beim Kunden.",
+    users: "Verkaufsmitarbeiter im Außendienst",
+    devices: "Tablets und Laptops",
+    note: "PWA — offline-fähig beim Kunden vor Ort.",
+  },
+  {
+    name: "Auslieferung",
+    purpose: "Tour- und Lieferschein-App für die LKW-Fahrer.",
+    users: "LKW-Fahrer",
+    devices: "Tablets in der Fahrerkabine",
+    note: "PWA mit lokaler Datenhaltung für mehrtägige Touren.",
+  },
+  {
+    name: "Zentrale",
+    purpose:
+      "Verwaltungs-, Monitoring- und Kommunikationsplattform für die drei mobilen Apps.",
+    users: "Disposition, Vertriebsleitung, IT",
+    devices: "Browser am Arbeitsplatz",
+    note: "Klassische Web-App, online betrieben.",
+  },
+];
+
+const packages = [
+  {
+    name: "bc-client",
+    purpose: "Anbindung an Business Central. Kapselt API-Aufrufe und Datenstrukturen.",
+  },
+  {
+    name: "auth",
+    purpose: "Benutzeranmeldung und Berechtigungsprüfung — einheitlich über alle Apps hinweg.",
+  },
+  {
+    name: "messaging",
+    purpose: "Echtzeit-Kommunikation zwischen Zentrale und den mobilen Apps.",
+  },
+  {
+    name: "shared-types",
+    purpose:
+      "Gemeinsame Datendefinitionen — Artikel, Kunde, Lieferschein, Tour und so weiter.",
+  },
+  {
+    name: "ui",
+    purpose: "Wiederverwendbare Oberflächen-Bausteine — Buttons, Karten, Formulare.",
+  },
+  {
+    name: "utils",
+    purpose: "Hilfsfunktionen für Datums- und Zahlenformatierung, Validatoren, Ähnliches.",
+  },
+];
+
+const stack = [
+  {
+    name: "TypeScript",
+    note: "Typisierte Variante von JavaScript. Erkennt viele Programmierfehler bereits beim Schreiben — nicht erst im Betrieb.",
+  },
+  {
+    name: "React",
+    note: "Etablierte Bibliothek für moderne Web-Oberflächen. Weit verbreitet und langfristig wartbar.",
+  },
+  {
+    name: "Vite",
+    note: "Schnelles Build-Werkzeug für Entwicklung und Auslieferung der Apps.",
+  },
+  {
+    name: "Tailwind CSS",
+    note: "Gestaltungs-Framework, das konsistente Designs über alle Apps hinweg erleichtert.",
+  },
+  {
+    name: "pnpm Workspaces & Turborepo",
+    note: "Werkzeuge zur Verwaltung des Monorepos.",
+  },
+  {
+    name: "PWA-Technologie",
+    note: "Erlaubt es Apps, sich wie installierte Anwendungen zu verhalten und auch ohne Internetverbindung zu funktionieren.",
+  },
+];
+---
+
+<BaseLayout
+  title="Technischer Hintergrund — Optimo Business Central Roadmap"
+  description="Technischer Hintergrund zur Optimo Business Central Roadmap: Aufbau und Zusammenspiel der vier Apps, Monorepo-Architektur, Tech-Stack und Datenfluss."
+>
+  {/* Kompakter Hero — bewusst leiser als der Hero der Hauptseite. */}
+  <section id="tech-intro" class="relative overflow-hidden bg-surface">
+    <div class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-tech/40 to-transparent"></div>
+
+    <div class="container-content py-16 md:py-24">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech mb-6">
+        Vertiefender Bereich
+      </p>
+
+      <h1 class="max-w-3xl text-display-lg font-semibold text-ink">
+        Technischer Hintergrund.
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-lg text-ink-muted leading-relaxed">
+        Dieser Bereich richtet sich an technisch interessierte Leser. Er
+        erklärt, wie die im Hauptteil beschriebenen Apps aufgebaut sind und
+        wie sie mit Business Central zusammenspielen. Sie können den Bereich
+        problemlos überspringen — die fachliche Botschaft der Roadmap
+        erschließt sich auch ohne diese Details.
+      </p>
+
+      <p class="mt-4 text-sm text-ink-subtle">
+        Lesezeit ca. 6&nbsp;Minuten.
+      </p>
+
+      {/* Inhaltsverzeichnis */}
+      <nav aria-label="Inhalt dieses Bereichs" class="mt-12">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle mb-4">
+          Inhalt
+        </p>
+        <ol class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {
+            toc.map((item, idx) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="group flex items-baseline gap-3 rounded-md border border-line/60 bg-surface-alt px-4 py-3 text-sm text-ink-muted transition hover:border-tech hover:text-ink"
+                >
+                  <span class="font-mono text-xs text-ink-subtle group-hover:text-tech">
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+                  <span>{item.label}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  {/* Sektion 1 — Zwei Welten */}
+  <Section id="tech-zwei-welten" variant="muted">
+    <header class="max-w-3xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech mb-3">
+        01 · Zwei Welten
+      </p>
+      <h2 class="text-display-md font-semibold text-ink">
+        Business Central und die App-Landschaft
+      </h2>
+      <p class="lede mt-4">
+        Die Roadmap berührt zwei klar getrennte Software-Welten. Beide
+        bleiben für sich verständlich — sie sprechen über klar definierte
+        Schnittstellen miteinander.
+      </p>
+    </header>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-2">
+      <div class="rounded-xl border-l-2 border-accent bg-surface-alt p-6">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+          Welt 1 — Business Central
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-ink-muted md:text-base">
+          Hier lebt das ERP selbst, inklusive des neuen Etiketten-Moduls aus
+          Säule&nbsp;5. Erweiterungen werden in <strong class="text-ink">AL</strong>
+          programmiert, der Eigensprache von Business Central. Der Code
+          läuft auf dem BC-Server und ist Teil des ERP-Updateprozesses.
+        </p>
+      </div>
+
+      <div class="rounded-xl border-l-2 border-tech bg-surface-alt p-6">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech">
+          Welt 2 — Die App-Landschaft
+        </p>
+        <p class="mt-3 text-sm leading-relaxed text-ink-muted md:text-base">
+          Die vier Apps (Scanner, Außendienst, Auslieferung, Zentrale) sind
+          eigenständige Web-Anwendungen. Sie sind in
+          <strong class="text-ink">TypeScript</strong> und
+          <strong class="text-ink">React</strong> geschrieben und laufen auf
+          den jeweiligen Endgeräten — Handheld, Tablet, Laptop oder Browser
+          am Arbeitsplatz.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-8 max-w-3xl">
+      <p class="text-sm leading-relaxed text-ink-muted md:text-base">
+        Warum die Trennung? Beide Welten haben eigene Stärken. Business
+        Central ist ideal für klassische Bürotätigkeit am Schreibtisch.
+        Eigene Apps sind besser für mobile, offline-fähige oder
+        spezialisierte Arbeitsabläufe — überall dort, wo das Werkzeug
+        sinnvoll näher am Anwender sitzt als an seinem ERP-Konto. Die beiden
+        Welten kommunizieren über standardisierte Schnittstellen (REST und
+        OData).
+      </p>
+    </div>
+
+    <TwoWorldsDiagram />
+  </Section>
+
+  {/* Sektion 2 — Vier Apps Überblick */}
+  <Section id="tech-vier-apps" variant="default">
+    <header class="max-w-3xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech mb-3">
+        02 · Die vier Apps im Überblick
+      </p>
+      <h2 class="text-display-md font-semibold text-ink">
+        Was jede App macht, wer sie nutzt, worauf sie läuft
+      </h2>
+      <p class="lede mt-4">
+        Drei der vier Apps sind als Progressive Web App (PWA) umgesetzt —
+        eine moderne Web-Anwendung, die sich wie eine installierte App
+        verhält und auch offline funktioniert. Die Zentrale ist eine
+        klassische Web-App im Browser.
+      </p>
+    </header>
+
+    <ul class="mt-12 grid gap-6 md:grid-cols-2">
+      {
+        apps.map((app) => (
+          <li>
+            <Card class="h-full">
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech">
+                {app.name}
+              </p>
+              <p class="mt-3 text-sm leading-relaxed text-ink md:text-base">
+                {app.purpose}
+              </p>
+              <dl class="mt-5 space-y-2 text-sm">
+                <div class="flex gap-3">
+                  <dt class="w-24 shrink-0 text-ink-subtle">Zielnutzer</dt>
+                  <dd class="text-ink-muted">{app.users}</dd>
+                </div>
+                <div class="flex gap-3">
+                  <dt class="w-24 shrink-0 text-ink-subtle">Geräte</dt>
+                  <dd class="text-ink-muted">{app.devices}</dd>
+                </div>
+                <div class="flex gap-3">
+                  <dt class="w-24 shrink-0 text-ink-subtle">Technik</dt>
+                  <dd class="text-ink-muted">{app.note}</dd>
+                </div>
+              </dl>
+            </Card>
+          </li>
+        ))
+      }
+    </ul>
+  </Section>
+
+  {/* Sektion 3 — Monorepo */}
+  <Section id="tech-monorepo" variant="muted">
+    <header class="max-w-3xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech mb-3">
+        03 · Monorepo-Architektur
+      </p>
+      <h2 class="text-display-md font-semibold text-ink">
+        Warum alle Apps in einem gemeinsamen Repository liegen
+      </h2>
+      <p class="lede mt-4">
+        Monorepo bedeutet: alle vier Apps und ihre gemeinsamen Bausteine
+        liegen in einem einzigen Code-Repository — statt in vier getrennten.
+        Im Hintergrund organisieren Werkzeuge wie pnpm Workspaces und
+        Turborepo, welche Teile wofür gebraucht werden.
+      </p>
+    </header>
+
+    <ul class="mt-10 grid gap-4 md:grid-cols-2">
+      <li>
+        <Card class="h-full">
+          <p class="text-sm font-semibold text-ink">Wiederverwendung</p>
+          <p class="mt-2 text-sm leading-relaxed text-ink-muted">
+            Datenmodelle, BC-Anbindung und Oberflächen-Bausteine entstehen
+            einmal und werden in allen Apps genutzt.
+          </p>
+        </Card>
+      </li>
+      <li>
+        <Card class="h-full">
+          <p class="text-sm font-semibold text-ink">Konsistenz</p>
+          <p class="mt-2 text-sm leading-relaxed text-ink-muted">
+            Wird ein gemeinsamer Baustein angepasst, wirkt die Änderung
+            sofort in allen Apps. Es kann keine „App mit alter Variante"
+            entstehen.
+          </p>
+        </Card>
+      </li>
+      <li>
+        <Card class="h-full">
+          <p class="text-sm font-semibold text-ink">Eine Entwicklungsumgebung</p>
+          <p class="mt-2 text-sm leading-relaxed text-ink-muted">
+            Statt vier getrennter Setups, Build-Pipelines und Versionsstände
+            gibt es eine durchgehende Sicht auf alles.
+          </p>
+        </Card>
+      </li>
+      <li>
+        <Card class="h-full">
+          <p class="text-sm font-semibold text-ink">Bessere KI-Unterstützung</p>
+          <p class="mt-2 text-sm leading-relaxed text-ink-muted">
+            Moderne KI-gestützte Entwicklungswerkzeuge arbeiten effizienter,
+            wenn der gesamte Kontext gleichzeitig sichtbar ist. Im Monorepo
+            ist das der Fall.
+          </p>
+        </Card>
+      </li>
+    </ul>
+  </Section>
+
+  {/* Sektion 4 — Gemeinsame Bausteine */}
+  <Section id="tech-bausteine" variant="default">
+    <header class="max-w-3xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech mb-3">
+        04 · Die gemeinsamen Bausteine
+      </p>
+      <h2 class="text-display-md font-semibold text-ink">
+        Sechs Pakete, die alle Apps nutzen
+      </h2>
+      <p class="lede mt-4">
+        Die wiederverwendbaren Bausteine liegen als sogenannte Packages im
+        Monorepo. Jeder erfüllt eine klare Aufgabe und wird von jeder App
+        eingebunden, die ihn braucht.
+      </p>
+    </header>
+
+    <ul class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {
+        packages.map((pkg) => (
+          <li>
+            <Card class="h-full">
+              <p class="font-mono text-sm font-semibold text-tech">{pkg.name}</p>
+              <p class="mt-3 text-sm leading-relaxed text-ink-muted">
+                {pkg.purpose}
+              </p>
+            </Card>
+          </li>
+        ))
+      }
+    </ul>
+
+    <MonorepoDiagram />
+  </Section>
+
+  {/* Sektion 5 — Tech-Stack */}
+  <Section id="tech-stack" variant="muted">
+    <header class="max-w-3xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech mb-3">
+        05 · Tech-Stack
+      </p>
+      <h2 class="text-display-md font-semibold text-ink">
+        Welche Technologien zum Einsatz kommen
+      </h2>
+      <p class="lede mt-4">
+        Die Auswahl ist bewusst zurückhaltend — etablierte Werkzeuge mit
+        großer Verbreitung und langfristiger Pflege. Keine Experimente, die
+        in zwei Jahren wieder verschwunden sind.
+      </p>
+    </header>
+
+    <dl class="mt-10 grid gap-x-10 gap-y-6 md:grid-cols-2">
+      {
+        stack.map((item) => (
+          <div class="border-l-2 border-line pl-5">
+            <dt class="text-sm font-semibold text-ink">{item.name}</dt>
+            <dd class="mt-2 text-sm leading-relaxed text-ink-muted">
+              {item.note}
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+  </Section>
+
+  {/* Sektion 6 — Datenfluss */}
+  <Section id="tech-datenfluss" variant="default">
+    <header class="max-w-3xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech mb-3">
+        06 · Datenfluss
+      </p>
+      <h2 class="text-display-md font-semibold text-ink">
+        Wie die Bausteine miteinander reden
+      </h2>
+      <p class="lede mt-4">
+        Wie kommen die Daten dorthin, wo sie gebraucht werden? Ein typisches
+        Beispiel — etwa eine Artikelabfrage in der Scanner-App.
+      </p>
+    </header>
+
+    <ol class="mt-10 grid max-w-3xl gap-4">
+      <li class="flex gap-4">
+        <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-tech/10 text-xs font-semibold text-tech">1</span>
+        <p class="text-sm leading-relaxed text-ink-muted md:text-base">
+          Eine App braucht Daten — etwa Artikelinformationen — und fragt sie
+          beim gemeinsamen Baustein <span class="font-mono text-tech">bc-client</span> an.
+        </p>
+      </li>
+      <li class="flex gap-4">
+        <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-tech/10 text-xs font-semibold text-tech">2</span>
+        <p class="text-sm leading-relaxed text-ink-muted md:text-base">
+          Der <span class="font-mono text-tech">bc-client</span> spricht über die definierte
+          Schnittstelle mit Business Central. Die Antwort nimmt denselben
+          Weg zurück.
+        </p>
+      </li>
+      <li class="flex gap-4">
+        <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-tech/10 text-xs font-semibold text-tech">3</span>
+        <p class="text-sm leading-relaxed text-ink-muted md:text-base">
+          Die <strong class="text-ink">Zentrale</strong> kommuniziert zusätzlich über die
+          <span class="font-mono text-tech">messaging</span>-Komponente direkt mit den
+          mobilen Apps — etwa um Anweisungen zu schicken oder
+          Statusrückmeldungen in Echtzeit zu empfangen.
+        </p>
+      </li>
+      <li class="flex gap-4">
+        <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-tech/10 text-xs font-semibold text-tech">4</span>
+        <p class="text-sm leading-relaxed text-ink-muted md:text-base">
+          Ist eine mobile App offline, werden Aktionen lokal gespeichert.
+          Sobald wieder Verbindung besteht, gleicht die App sich automatisch
+          ab.
+        </p>
+      </li>
+    </ol>
+
+    <DataFlowDiagram />
+  </Section>
+
+  {/* Sektion 7 — Sicherheit */}
+  <Section id="tech-sicherheit" variant="muted">
+    <header class="max-w-3xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech mb-3">
+        07 · Sicherheit und Datenschutz
+      </p>
+      <h2 class="text-display-md font-semibold text-ink">
+        Wo die Daten leben und wie sie geschützt sind
+      </h2>
+      <p class="lede mt-4">
+        Die Architektur folgt dem Grundsatz: Daten bleiben in der
+        Infrastruktur, die Optimo selbst verantwortet. Was sich im
+        Beratungsprozess noch klärt, ist als solches gekennzeichnet.
+      </p>
+    </header>
+
+    <ul class="mt-10 grid max-w-3xl gap-4">
+      <li class="flex gap-3 text-sm leading-relaxed text-ink-muted md:text-base">
+        <span aria-hidden="true" class="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-tech" />
+        <span>
+          Business Central läuft <strong class="text-ink">on-prem</strong> auf Servern, die
+          Optimo selbst verantwortet — bewusste Architekturentscheidung der
+          Roadmap (siehe Säule&nbsp;1).
+        </span>
+      </li>
+      <li class="flex gap-3 text-sm leading-relaxed text-ink-muted md:text-base">
+        <span aria-hidden="true" class="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-tech" />
+        <span>
+          Authentifizierung erfolgt über klar definierte Benutzerrollen.
+          Jeder Anwender sieht genau das, was zu seiner Aufgabe gehört —
+          nicht mehr.
+        </span>
+      </li>
+      <li class="flex gap-3 text-sm leading-relaxed text-ink-muted md:text-base">
+        <span aria-hidden="true" class="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-tech" />
+        <span>
+          Die Kommunikation zwischen den Apps und Business Central erfolgt
+          verschlüsselt.
+        </span>
+      </li>
+      <li class="flex gap-3 text-sm leading-relaxed text-ink-muted md:text-base">
+        <span aria-hidden="true" class="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-tech" />
+        <span>
+          Personenbezogene Daten werden gemäß <strong class="text-ink">DSGVO</strong>
+          behandelt. Datenhaltung der Versand-App im europäischen Datenraum
+          ist in den technischen Eckdaten der Säule&nbsp;4 festgehalten.
+        </span>
+      </li>
+    </ul>
+
+    {/* TODO: Konkrete Hosting-Standorte der App-Server, exakte Verschlüsselungsverfahren
+       und Zugriffsprotokolle werden im Technik-Termin mit der Optimo-IT geklärt
+       (siehe BRIEFING.md Abschnitt 8). */}
+    <div class="mt-8 max-w-3xl rounded-lg border border-line/70 bg-surface-alt p-5">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle">
+        Noch in Klärung
+      </p>
+      <p class="mt-2 text-sm leading-relaxed text-ink-muted">
+        Konkrete Details zu Hosting-Standort der App-Server, eingesetzten
+        Verschlüsselungsverfahren und Zugriffsprotokollen werden im
+        Technik-Termin mit der Optimo-IT festgelegt.
+      </p>
+    </div>
+  </Section>
+
+  {/* Sektion 8 — Ausblick */}
+  <Section id="tech-ausblick" variant="default">
+    <header class="max-w-3xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-tech mb-3">
+        08 · Ausblick
+      </p>
+      <h2 class="text-display-md font-semibold text-ink">
+        Was nach dem Initial-Release möglich ist
+      </h2>
+      <p class="lede mt-4">
+        Die Plattform ist bewusst modular aufgebaut. Neue Funktionen lassen
+        sich schrittweise ergänzen, ohne den Kern jedes Mal anzufassen.
+        Drei Beispiele, wie das in der Praxis aussehen könnte:
+      </p>
+    </header>
+
+    <ul class="mt-10 grid gap-6 md:grid-cols-3">
+      <li>
+        <Card class="h-full">
+          <p class="text-sm font-semibold text-ink">Push-Benachrichtigungen</p>
+          <p class="mt-3 text-sm leading-relaxed text-ink-muted">
+            Kurzfristige Tour- oder Auftragsänderungen erreichen Außendienst
+            und Fahrer in Echtzeit, ohne Anruf.
+          </p>
+        </Card>
+      </li>
+      <li>
+        <Card class="h-full">
+          <p class="text-sm font-semibold text-ink">Erweiterte Foto-Anhänge</p>
+          <p class="mt-3 text-sm leading-relaxed text-ink-muted">
+            Abstellnachweise, Schadensbilder, Dokumentation der
+            Ladungssicherung — direkt in der Auslieferungs-App und
+            revisionssicher abgelegt.
+          </p>
+        </Card>
+      </li>
+      <li>
+        <Card class="h-full">
+          <p class="text-sm font-semibold text-ink">Auswertungen in der Zentrale</p>
+          <p class="mt-3 text-sm leading-relaxed text-ink-muted">
+            Reklamationsanalysen, Tourenstatistiken, Pünktlichkeitsquoten —
+            aus den Daten, die ohnehin in der Plattform anfallen.
+          </p>
+        </Card>
+      </li>
+    </ul>
+
+    {/* Zurück zur Hauptpräsentation */}
+    <div class="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-line/60 pt-10">
+      <p class="text-sm text-ink-muted">
+        Das war der technische Hintergrund. Zurück zur Roadmap oder direkt
+        zum Gespräch.
+      </p>
+      <div class="flex flex-wrap items-center gap-3">
+        <a
+          href="/#roadmap"
+          class="inline-flex items-center gap-2 rounded-md border border-line px-5 py-3 text-sm font-medium text-ink-muted transition hover:border-tech hover:text-ink"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Zurück zur Roadmap
+        </a>
+        <a
+          href="/#contact"
+          class="inline-flex items-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-medium text-white transition hover:bg-brand-600"
+        >
+          Zum Kontakt
+        </a>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

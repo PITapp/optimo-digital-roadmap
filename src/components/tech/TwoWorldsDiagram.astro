@@ -1,0 +1,126 @@
+---
+/* Schaubild zu Sektion "Zwei getrennte Welten":
+   Links Business Central (BC-Teal), rechts die App-Landschaft
+   (Tech-Slate), in der Mitte die API-Schnittstelle. */
+---
+
+<figure class="mt-10">
+  <div class="overflow-x-auto rounded-xl border border-line/70 bg-surface-alt p-6 shadow-card dark:shadow-card-dark">
+    <svg
+      viewBox="0 0 800 320"
+      role="img"
+      aria-labelledby="two-worlds-title two-worlds-desc"
+      class="mx-auto block h-auto w-full min-w-[640px] max-w-[760px]"
+    >
+      <title id="two-worlds-title">Die zwei Welten der Roadmap</title>
+      <desc id="two-worlds-desc">
+        Business Central auf der linken Seite und die App-Landschaft auf der
+        rechten Seite. Beide Welten kommunizieren über eine API-Schnittstelle
+        in der Mitte.
+      </desc>
+
+      <!-- Linke Welt: Business Central -->
+      <g>
+        <rect
+          x="30" y="30" width="290" height="260" rx="14"
+          fill="rgb(var(--color-accent) / 0.07)"
+          stroke="rgb(var(--color-accent))" stroke-width="1.5"
+        />
+        <text x="175" y="64" text-anchor="middle"
+          fill="rgb(var(--color-accent))"
+          font-size="11" font-weight="600" letter-spacing="2">WELT 1</text>
+        <text x="175" y="100" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="20" font-weight="600">Business Central</text>
+        <text x="175" y="122" text-anchor="middle"
+          fill="rgb(var(--color-ink-muted))"
+          font-size="12">Das ERP von Optimo</text>
+
+        <rect x="70" y="148" width="210" height="38" rx="6"
+          fill="rgb(var(--color-surface-alt))"
+          stroke="rgb(var(--color-line))" />
+        <text x="175" y="172" text-anchor="middle"
+          fill="rgb(var(--color-ink))" font-size="13">BC-Standard (Säule 1)</text>
+
+        <rect x="70" y="198" width="210" height="38" rx="6"
+          fill="rgb(var(--color-surface-alt))"
+          stroke="rgb(var(--color-line))" />
+        <text x="175" y="222" text-anchor="middle"
+          fill="rgb(var(--color-ink))" font-size="13">Etiketten-Modul (Säule 5)</text>
+
+        <text x="175" y="266" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="11">
+          Programmiersprache AL · läuft auf dem BC-Server
+        </text>
+      </g>
+
+      <!-- Verbindung in der Mitte -->
+      <g>
+        <line x1="320" y1="160" x2="480" y2="160"
+          stroke="rgb(var(--color-ink-subtle))" stroke-width="1.5"
+          stroke-dasharray="5 4" />
+        <polygon points="328,160 338,154 338,166" fill="rgb(var(--color-ink-subtle))" />
+        <polygon points="472,160 462,154 462,166" fill="rgb(var(--color-ink-subtle))" />
+        <text x="400" y="148" text-anchor="middle"
+          fill="rgb(var(--color-ink-muted))" font-size="12" font-weight="500">
+          API-Schnittstelle
+        </text>
+        <text x="400" y="182" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="11">
+          REST / OData
+        </text>
+      </g>
+
+      <!-- Rechte Welt: App-Landschaft -->
+      <g>
+        <rect
+          x="480" y="30" width="290" height="260" rx="14"
+          fill="rgb(var(--color-tech) / 0.07)"
+          stroke="rgb(var(--color-tech))" stroke-width="1.5"
+        />
+        <text x="625" y="64" text-anchor="middle"
+          fill="rgb(var(--color-tech))"
+          font-size="11" font-weight="600" letter-spacing="2">WELT 2</text>
+        <text x="625" y="100" text-anchor="middle"
+          fill="rgb(var(--color-ink))"
+          font-size="20" font-weight="600">App-Landschaft</text>
+        <text x="625" y="122" text-anchor="middle"
+          fill="rgb(var(--color-ink-muted))"
+          font-size="12">Die vier PITapp-Apps</text>
+
+        <rect x="510" y="148" width="100" height="38" rx="6"
+          fill="rgb(var(--color-surface-alt))"
+          stroke="rgb(var(--color-line))" />
+        <text x="560" y="172" text-anchor="middle"
+          fill="rgb(var(--color-ink))" font-size="12">Scanner</text>
+
+        <rect x="640" y="148" width="100" height="38" rx="6"
+          fill="rgb(var(--color-surface-alt))"
+          stroke="rgb(var(--color-line))" />
+        <text x="690" y="172" text-anchor="middle"
+          fill="rgb(var(--color-ink))" font-size="12">Außendienst</text>
+
+        <rect x="510" y="198" width="100" height="38" rx="6"
+          fill="rgb(var(--color-surface-alt))"
+          stroke="rgb(var(--color-line))" />
+        <text x="560" y="222" text-anchor="middle"
+          fill="rgb(var(--color-ink))" font-size="12">Auslieferung</text>
+
+        <rect x="640" y="198" width="100" height="38" rx="6"
+          fill="rgb(var(--color-surface-alt))"
+          stroke="rgb(var(--color-line))" />
+        <text x="690" y="222" text-anchor="middle"
+          fill="rgb(var(--color-ink))" font-size="12">Zentrale</text>
+
+        <text x="625" y="266" text-anchor="middle"
+          fill="rgb(var(--color-ink-subtle))" font-size="11">
+          TypeScript · React · läuft auf Endgeräten
+        </text>
+      </g>
+    </svg>
+  </div>
+  <figcaption class="mt-3 text-sm leading-relaxed text-ink-subtle">
+    Schaubild&nbsp;1 — Zwei klar getrennte Code-Welten, verbunden über
+    standardisierte Schnittstellen.
+  </figcaption>
+</figure>

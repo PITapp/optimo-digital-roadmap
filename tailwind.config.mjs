@@ -30,6 +30,12 @@ export default {
           bold: "rgb(var(--color-accent-bold) / <alpha-value>)",
           hover: "rgb(var(--color-accent-hover) / <alpha-value>)",
         },
+        tech: {
+          /* Tech-Slate — gedämpfter Akzent für den Bereich
+             "Technischer Hintergrund". */
+          DEFAULT: "rgb(var(--color-tech) / <alpha-value>)",
+          muted: "rgb(var(--color-tech-muted) / <alpha-value>)",
+        },
         surface: {
           DEFAULT: "rgb(var(--color-surface) / <alpha-value>)",
           alt: "rgb(var(--color-surface-alt) / <alpha-value>)",

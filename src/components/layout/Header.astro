@@ -1,15 +1,25 @@
 ---
 import ThemeToggle from "@components/ui/ThemeToggle.astro";
 
-const navItems = [
-  { href: "#summary", label: "Überblick" },
-  { href: "#bc-migration", label: "Migration" },
-  { href: "#scanner-app", label: "Scanner" },
-  { href: "#aussendienst", label: "Außendienst" },
-  { href: "#versand", label: "Versand" },
-  { href: "#etiketten", label: "Etiketten" },
-  { href: "#roadmap", label: "Roadmap" },
-  { href: "#contact", label: "Kontakt" },
+type NavItem = {
+  href: string;
+  label: string;
+  muted?: boolean;
+};
+
+/* Anker beginnen mit "/#…", damit sie sowohl auf der Startseite (interner
+   Sprung) als auch auf der Unterseite "Technischer Hintergrund"
+   (vollständige Navigation) korrekt funktionieren. */
+const navItems: NavItem[] = [
+  { href: "/#summary", label: "Überblick" },
+  { href: "/#bc-migration", label: "Migration" },
+  { href: "/#scanner-app", label: "Scanner" },
+  { href: "/#aussendienst", label: "Außendienst" },
+  { href: "/#versand", label: "Versand" },
+  { href: "/#etiketten", label: "Etiketten" },
+  { href: "/#roadmap", label: "Roadmap" },
+  { href: "/technischer-hintergrund/", label: "Hintergrund", muted: true },
+  { href: "/#contact", label: "Kontakt" },
 ];
 ---
 
@@ -18,7 +28,7 @@ const navItems = [
 >
   <div class="container-content flex h-16 items-center justify-between gap-4">
     <a
-      href="#top"
+      href="/"
       title="Optimo Business Central Roadmap — präsentiert von PITapp"
       class="flex shrink-0 items-center"
     >
@@ -40,7 +50,10 @@ const navItems = [
         navItems.map((item) => (
           <a
             href={item.href}
-            class="whitespace-nowrap rounded-md px-3 py-2 text-sm text-ink-muted transition hover:bg-surface-muted hover:text-ink"
+            class:list={[
+              "whitespace-nowrap rounded-md px-3 py-2 text-sm transition hover:bg-surface-muted hover:text-ink",
+              item.muted ? "text-ink-subtle" : "text-ink-muted",
+            ]}
           >
             {item.label}
           </a>

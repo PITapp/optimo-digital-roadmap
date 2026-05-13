@@ -5,6 +5,7 @@ import Hero from "@components/sections/Hero.astro";
 import Summary from "@components/sections/Summary.astro";
 import Pillar from "@components/sections/Pillar.astro";
 import Roadmap from "@components/sections/Roadmap.astro";
+import TechBackgroundLink from "@components/sections/TechBackgroundLink.astro";
 import Contact from "@components/sections/Contact.astro";
 
 const pillars = (await getCollection("pillars")).sort(
@@ -25,5 +26,6 @@ const variants = ["default", "muted", "default", "muted", "default"] as const;
   }
 
   <Roadmap />
+  <TechBackgroundLink />
   <Contact />
 </BaseLayout>
